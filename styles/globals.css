@@ -97,5 +97,22 @@ color: inherit;
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover contain;
+    background-size: cover;
+  }
+
+  .bg-1 {
+    background-image: url("/assets/white_branches.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover contain;
+    background-size: cover;
+  }
+
+  .bg-2 {
+    background-image: url("/assets/book.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover contain;
     background-size: cover;
   }
