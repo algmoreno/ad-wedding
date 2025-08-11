@@ -1,8 +1,11 @@
 import React from 'react'
+import { SaveDateCard  } from '@/components/index'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className='py-10'>
+        <SaveDateCard />
+    </div>
   )
 }
 
