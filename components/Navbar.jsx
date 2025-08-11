@@ -28,15 +28,15 @@ const Navbar = () => {
             <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
           </DisclosureButton>
         </div>
-        <div className="flex flex-1 bg-amber-600 items-center justify-center sm:items-stretch sm:justify-start">
-          <div className="flex shrink-0 items-center">
+        <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex ml-auto shrink-0 items-center">
             <img
               alt="Your Company"
               src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
               className="h-8 w-auto"
             />
           </div>
-          <div className="hidden sm:ml-6 sm:block">
+          <div className="hidden m-auto sm:ml-6 sm:block">
             <div className="flex space-x-4">
               {navigation.map((item) => (
                 <a
@@ -45,7 +45,7 @@ const Navbar = () => {
                   aria-current={item.current ? 'page' : undefined}
                   className={classNames(
                     item.current ? 'bg-gray-200 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
-                    'rounded-md px-3 py-2 text-sm font-medium',
+                    'px-3 py-2 text-sm font-medium',
                   )}
                 >
                   {item.name}
