@@ -110,7 +110,7 @@ color: inherit;
   }
 
   .bg-2 {
-    background-image: url("/assets/book.jpg");
+    background-image: url("/assets/house_tree.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover contain;
