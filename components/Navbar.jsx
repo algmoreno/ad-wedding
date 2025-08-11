@@ -16,8 +16,8 @@ const navigation = [
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="relative border-black border-b-8">
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-primary">
+    <Disclosure as="nav" className="relative ">
+    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-primary text-white">
       <div className="relative bg-red-800 flex h-16 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* Mobile menu button*/}
@@ -43,10 +43,7 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   aria-current={item.current ? 'page' : undefined}
-                  className={classNames(
-                    item.current ? 'bg-gray-200 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
-                    'px-3 py-2 text-sm font-medium',
-                  )}
+                  className={'text-white'}
                 >
                   {item.name}
                 </a>
