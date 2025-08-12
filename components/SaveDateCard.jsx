@@ -8,7 +8,7 @@ const SaveDateCard = () => {
         <div className="relative w-full bg-6">
             <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-800/90 text-shadow-lg/80 text-shadow-white text-6xl">
             <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
-            <div className="absolute inset-0 from-custom pointer-events-none text-center " />
+            <div className="absolute inset-0 balatro-custom pointer-events-none text-center " />
                 <h2 className="z-10 m-10 underline decoration-dotted">Saturday, April 18, 2026</h2>
                 <h2 className="text-3xl z-10 m-10 font-primary">Hilton El Conquistador Resort</h2>
                 <h1 className="text-3xl z-10 m-10 font-primary">Tucson, AZ</h1>

@@ -112,6 +112,16 @@ color: inherit;
     height: 100%;
 }
 
+.balatro-custom {
+    background: url('/assets/rose_sketch.png') center/cover no-repeat;
+    background-attachment: local;
+    background-size: 1500px;
+    background-position: 20% 40%;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(254, 254, 254), transparent);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+}
+
 .bg-hotel {
     background-image: linear-gradient(to bottom, rgb(245, 245, 245), transparent);
     background-repeat: no-repeat;
@@ -174,14 +184,6 @@ color: inherit;
     background-position: -1000% 60%;
 }
 
-.from-custom {
-    background: url('/assets/rose_sketch.png') center/cover no-repeat;
-    background-attachment: local;
-    background-size: 1500px;
-    background-position: 20% 40%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(254, 254, 254), transparent);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-  }
+
 
   
