@@ -11,6 +11,12 @@ text-decoration: none;
 color: inherit;
 }
 
+.font-header {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 800;
+    font-style: normal;
+}
+
 .font-decorative {
     font-family: "Dr Sugiyama", cursive;
     font-weight: 400;
