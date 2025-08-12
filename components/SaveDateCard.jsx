@@ -1,21 +1,22 @@
 import React from 'react'
-
+import Balatro from './Balatro';
 
 const SaveDateCard = () => {
   return (
-    <div className="flex bg-2 max-w-3xl h-[600px] m-auto overflow-hidden shadow-sm font-decorative drop-shadow-xl/100 ">
-        <div className="bg-red-900/60 backdrop-blur-sm grid grid-cols-1 grid-rows-3 m-auto gap-4 px-4 py-5 sm:p-6 border-4 border-black ">
-            <h2 className='text-4xl m-auto'>
-                Saturday, April 18, 2026
-            </h2>
-            <h1 className='text-4xl m-auto'>
-                Tucson, AZ
-            </h1>
-            <h2 className='text-4xl m-auto'>
-                El Conquistador Resort
-            </h2>
+    <div className="flex bg-6 max-w-3xl h-[600px] m-auto overflow-hidden shadow-sm font-decorative drop-shadow-xl/100 ">
+        <div className="relative w-full bg-6">
+        <Balatro
+            isRotate={false}
+            mouseInteraction={false}
+            pixelFilter={2000}
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-black text-6xl">
+            <h2>Saturday, April 18, 2026</h2>
+            <h1>Tucson, AZ</h1>
+            <h2>El Conquistador Resort</h2>
         </div>
-      </div>
+        </div>
+    </div>
   )
 }
 

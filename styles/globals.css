@@ -13,7 +13,7 @@ color: inherit;
 
 .font-decorative {
     font-family: "Pinyon Script", cursive;
-    font-weight: 400;
+    font-weight: 800;
     font-style: normal;
 }
 
@@ -38,9 +38,9 @@ color: inherit;
     transition: box-shadow 0.5s ease-out;
     overflow: visible;
     cursor: pointer;
-  }
+}
   
-  .gradient-overlay {
+.gradient-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,9 +51,9 @@ color: inherit;
     border-radius: inherit;
     z-index: 0;
     pointer-events: none;
-  }
-  
-  .gradient-overlay::before {
+}
+
+.gradient-overlay::before {
     content: "";
     position: absolute;
     left: 0;
@@ -66,55 +66,98 @@ color: inherit;
     transform: translate(-50%, -50%);
     background-color: #060010;
     z-index: -1;
-  }
-  
-  @keyframes gradient {
+}
+
+@keyframes gradient {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  
+
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
-  
+
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
-  
-  .text-content {
+}
+
+.text-content {
     display: flex;
     position: relative;
     line-height: 1.1; /* a bit more than default */
-    padding: 0.1em 0; /* gives room top/bottom */
+    padding: 15px;
     z-index: 2;
     background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     animation: gradient linear infinite;
-  }
+}
 
-  .bg-0 {
+.balatro-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+.iridescence-container {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-0 {
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover contain;
     background-size: cover;
-  }
+}
 
-  .bg-1 {
+.bg-1 {
     background-image: url("/assets/white_branches.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover contain;
     background-size: cover;
-  }
+}
 
-  .bg-2 {
+.bg-2 {
     background-image: url("/assets/house_tree.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover contain;
     background-size: cover;
+}
+
+.bg-3 {
+    background-image: url("/assets/book.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-4 {
+    background-image: url("/assets/wall_plants.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-5 {
+    background-image: url("/assets/card_texture.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-6 {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.4), rgba(254, 205, 9, 0.1)),
+      url("/assets/rose_sketch.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50%;
   }
+
+  
