@@ -3,7 +3,7 @@ import { SaveDateCard  } from '@/components/index'
 
 const Landing = () => {
   return (
-    <div className='py-10'>
+    <div className='py-8'>
         <SaveDateCard />
     </div>
   )

@@ -152,12 +152,20 @@ color: inherit;
 
 .bg-6 {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.4), rgba(254, 205, 9, 0.1)),
+      linear-gradient(rgba(255, 255, 255, 0.4), rgba(241, 208, 76, 0.3)),
       url("/assets/rose_sketch.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 50%;
+}
+
+.from-custom {
+    background: url('/assets/rose_sketch.png') center/cover no-repeat;
+    background-attachment: fixed;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
   }
 
   

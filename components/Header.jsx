@@ -11,7 +11,7 @@ const Header = () => {
             colors={["#000000", "#000000", "#ba1004", "#000000", "#ba1004"]} // #fffbeb #910000
             animationSpeed={20}
             showBorder={false}
-            className="m-auto text-[40px] md:text-[125px]"
+            className="m-auto text-[40px] md:text-[125px] text-shadow-lg/20"
             >
                 Alan & Doli
             </GradientText>
