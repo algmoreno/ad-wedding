@@ -160,10 +160,10 @@ color: inherit;
     background-image:
       linear-gradient(rgba(255, 255, 255, 0.4), rgba(142, 133, 90, 0.3)),
       url("/assets/rose_sketch.png");
-    background-repeat: no-repeat;
+    background-repeat:repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: 20% 50%;
+    background-size: 2000px;
+    background-position: -1000% 60%;
 }
 
 .from-custom {

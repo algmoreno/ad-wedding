@@ -3,7 +3,7 @@ import Balatro from './Balatro';
 
 const SaveDateCard = () => {
   return (
-    <div className="bg-6 flex max-w-3xl h-[700px] m-auto overflow-hidden shadow-sm font-decorative drop-shadow-xl/50 rounded-sm">
+    <div className="bg-6 flex max-w-2xl h-[700px] m-auto overflow-hidden shadow-sm font-decorative drop-shadow-xl/50 rounded-sm">
         <div className="relative w-full bg-6">
             <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-800/90 text-shadow-lg/80 text-shadow-white text-6xl">
             <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
