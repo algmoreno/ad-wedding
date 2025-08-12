@@ -112,6 +112,14 @@ color: inherit;
     height: 100%;
 }
 
+.bg-hotel {
+    background-image: linear-gradient(to bottom, rgb(245, 245, 245), transparent);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover contain;
+    background-size: cover;
+}
+
 .bg-0 {
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;

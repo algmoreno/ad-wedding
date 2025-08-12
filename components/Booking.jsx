@@ -2,7 +2,7 @@ import React from 'react'
 
 const Booking = () => {
   return (
-    <div id="#booking" className="bg-amber-50 backdrop-blur-2xl mt-20 flex max-w-7xl h-[700px] m-auto overflow-hidden shadow-sm font-primary drop-shadow-xl/50 rounded-sm">
+    <div id="booking" className="bg-hotel  mt-20 flex max-w-7xl h-[700px] m-auto overflow-hidden shadow-sm font-primary drop-shadow-xl/50 rounded-sm">
     <div className="relative w-full ">
         <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-800/90 text-shadow-lg/80 text-shadow-white text-6xl">
         <div className="absolute inset-0  " />
