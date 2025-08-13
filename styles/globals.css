@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dr+Sugiyama&family=Pinyon+Script&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Dynalight&family=Ephesis&family=Luxurious+Script&family=Pinyon+Script&family=Tangerine:wght@400;700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
 @import 'tailwindcss';
 
 
@@ -12,15 +11,27 @@ text-decoration: none;
 color: inherit;
 }
 
-.font-header {
-  font-family: "Tangerine", cursive;
-  font-weight: 800;
-  font-style: normal;
-}
-
 .font-decorative {
     font-family: "Dr Sugiyama", cursive;
     font-weight: 400;
+    font-style: normal;
+}
+
+/* .font-decorative {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+/* .font-decorative {
+    font-family: "Dynalight", cursive;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+.font-decorative {
+    font-family: "Luxurious Script", cursive;
+    font-weight: 800;
     font-style: normal;
 }
 
@@ -117,14 +128,14 @@ color: inherit;
     background: url('/assets/rose_sketch.png') center/cover no-repeat;
     background-attachment: local;
     background-size: 1500px;
-    background-position: 20% 40%;
+    background-position: 80% 60%;
     -webkit-mask-image: linear-gradient(to bottom, rgb(254, 254, 254), transparent);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
 }
 
-.bg-hotel {
-    background-image: linear-gradient(to bottom, rgb(245, 245, 245), transparent);
+.bg-book {
+    background-image: url("/assets/book.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover contain;
@@ -136,7 +147,6 @@ color: inherit;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover contain;
-    background-size: cover;
 }
 
 .bg-1 {
@@ -144,45 +154,51 @@ color: inherit;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover contain;
-    background-size: cover;
 }
 
 .bg-2 {
     background-image: url("/assets/house_tree.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .bg-3 {
     background-image: url("/assets/book.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .bg-4 {
     background-image: url("/assets/wall_plants.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .bg-5 {
     background-image: url("/assets/card_texture.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .bg-6 {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.4), rgba(142, 133, 90, 0.3)),
-      url("/assets/rose_sketch.png");
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(68, 40, 0, 0.3)),
+    url("/assets/tree_pattern.png");
     background-repeat:repeat;
     background-attachment: fixed;
-    background-size: 2000px;
-    background-position: -1000% 60%;
+    background-size: 1500px;
+    background-position: -2000% 50%;
+}
+
+.bg-6-1 {
+    background-image:
+    linear-gradient(rgba(133, 82, 12, 0.4), rgba(255, 255, 255, 0.3)),
+    url("/assets/tree_pattern.png");
+    backdrop-filter: invert(150%);
+    background-repeat:repeat;
+    background-attachment: fixed;
+    background-size: 1500px;
+    background-position: -2000% 50%;
 }
 
 

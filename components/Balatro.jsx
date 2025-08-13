@@ -109,13 +109,13 @@ export default function Balatro({
   spinRotation = -2.0,
   spinSpeed = 1.5,
   offset = [0.0, 0.0],
-  color1 = "#01284a", // outer
+  color1 = "#011433", // outer
   color2 = "#034f91", // center #d11c00
   color3 = "#eeeeee", 
   contrast = 3.5,
   lighting = 0.4,
   spinAmount = 0.25,
-  pixelFilter = 745.0,
+  pixelFilter = 2000.0,
   spinEase = 1.0,
   isRotate = false,
   mouseInteraction = false,
