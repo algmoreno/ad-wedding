@@ -114,7 +114,7 @@ export default function Balatro({
   color3 = "#eeeeee", 
   contrast = 3.5,
   lighting = 0.4,
-  spinAmount = 0.25,
+  spinAmount = 0.2,
   pixelFilter = 2000.0,
   spinEase = 1.0,
   isRotate = false,
