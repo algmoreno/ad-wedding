@@ -109,7 +109,7 @@ export default function Balatro({
   spinRotation = -2.0,
   spinSpeed = 1.5,
   offset = [0.0, 0.0],
-  color1 = "#011433", // outer
+  color1 = "#eeeeee", // outer #011433
   color2 = "#034f91", // center #d11c00
   color3 = "#eeeeee", 
   contrast = 3.5,

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Dynalight&family=Ephesis&family=Luxurious+Script&family=Pinyon+Script&family=Tangerine:wght@400;700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Italianno&family=Luxurious+Script&display=swap');
 @import 'tailwindcss';
 
 
@@ -12,10 +12,22 @@ color: inherit;
 }
 
 .font-decorative {
-    font-family: "Dr Sugiyama", cursive;
+    font-family: "Carattere", cursive;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.font-primary {
+    font-family: "Nanum Myeongjo", serif;
     font-weight: 400;
     font-style: normal;
 }
+
+/* .font-decorative {
+    font-family: "Dr Sugiyama", cursive;
+    font-weight: 400;
+    font-style: normal;
+} */
 
 /* .font-decorative {
   font-family: "Tangerine", cursive;
@@ -29,17 +41,19 @@ color: inherit;
     font-style: normal;
 } */
 
-.font-decorative {
-    font-family: "Luxurious Script", cursive;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.font-primary {
+/* .font-primary {
     font-family: "Zain", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
+} */
+
+/* .font-decorative {
+    font-family: "Luxurious Script", cursive;
+    font-weight: 800;
+    font-style: normal;
+} */
+
+
 
 /* GRADIENT TEXT */ 
 .animated-gradient-text {
@@ -125,14 +139,21 @@ color: inherit;
 }
 
 .balatro-custom {
-    background: url('/assets/rose_sketch.png') center/cover no-repeat;
-    background-attachment: local;
-    background-size: 1500px;
-    background-position: 80% 60%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(250, 250, 250), transparent);
+    background-image:
+    linear-gradient(rgba(133, 82, 12, 0.4), rgba(255, 255, 255, 0.3)),
+    url("/assets/tree_pattern.png");
+    backdrop-filter: blur(15px);
+    background-attachment: fixed;
+    background-size: 900px;
+    background-position: 80% 90%;
+    -webkit-mask-image: linear-gradient(to top, rgb(252, 209, 209), transparent);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
 }
+
+/* .balatro-custom {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
+} */
 
 .bg-book {
     background-image: url("/assets/book.jpg");
@@ -194,14 +215,13 @@ color: inherit;
     background-image:
     linear-gradient(rgba(133, 82, 12, 0.4), rgba(255, 255, 255, 0.3)),
     url("/assets/tree_pattern.png");
-    backdrop-filter: blur(5px);
-    backdrop-filter: invert(150%);
+    backdrop-filter: blur(2px);
+    backdrop-filter: invert(-10%);
     background-repeat:repeat;
     background-attachment: fixed;
     background-size: 3000px;
     background-position: -2000% 50%;
 }
-
 
 
   
