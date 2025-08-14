@@ -1,4 +1,5 @@
 import React from 'react'
+import { Header } from '@/components/index';
 import "@/styles/globals.css";
 
 
@@ -10,8 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-      <header >
+      <body className="font-decorative">
+        <header >
+        <Header />
         </header>
         <main >
           {children}

@@ -2,8 +2,7 @@ import { Header, Landing, Booking } from '@/components/index';
 
 export default function Home() {
   return (
-    <div className='bg-6 font-decorative'>
-      <Header />
+    <div className='bg-6'>
       <Landing />
     </div>
   );

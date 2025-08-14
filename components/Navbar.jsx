@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
+    { name: 'Gallery', href: '/gallery', current: true },
     { name: 'Details', href: '#', current: false },
     { name: 'Travel & Accommodation', href: '#booking', current: false },
     { name: 'RSVP', href: '#', current: false },
@@ -17,8 +17,8 @@ const navigation = [
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="relative ">
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-primary text-black ">
+    <Disclosure as="nav" className="relative backgdrop-blur-lg">
+    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-primary text-black">
       <div className="relative flex h-10 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* Mobile menu button*/}
