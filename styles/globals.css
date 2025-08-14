@@ -138,18 +138,32 @@ color: inherit;
     height: 100%;
 }
 
-.balatro-custom {
+.balatro-custom-sm {
     background-image:
-    linear-gradient(rgba(133, 82, 12, 0.4), rgba(255, 255, 255, 0.3)),
+    linear-gradient(rgba(133, 56, 12, 0.4), rgba(132, 113, 8, 0.3)),
     url("/assets/tree_pattern.png");
     backdrop-filter: blur(15px);
     background-attachment: fixed;
-    background-size: 900px;
-    background-position: 80% 90%;
-    -webkit-mask-image: linear-gradient(to top, rgb(252, 209, 209), transparent);
+    background-size: 1900px;
+    background-position: -10% 120%;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(252, 209, 209), transparent);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
 }
+
+.balatro-custom {
+    background-image:
+    linear-gradient(rgba(133, 56, 12, 0.4), rgba(132, 113, 8, 0.3)),
+    url("/assets/tree_pattern.png");
+    backdrop-filter: blur(15px);
+    background-attachment: fixed;
+    background-size: 700px;
+    background-position: -10% 120%;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(199, 3, 3), transparent);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+}
+
 
 /* .balatro-custom {
     background: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
