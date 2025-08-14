@@ -168,13 +168,8 @@ color: inherit;
 /* .balatro-custom {
     background: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
 } */
-
-.bg-book {
-    background-image: url("/assets/book.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover contain;
-    background-size: cover;
+.bg-primary {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(4, 145, 200, 0.3));
 }
 
 .bg-0 {

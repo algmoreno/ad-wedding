@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-decorative">
+      <body className="bg-primary font-decorative">
         <header >
         <Header />
         </header>
