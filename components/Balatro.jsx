@@ -2,7 +2,6 @@
 import { Renderer, Program, Mesh, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
 
-import "@/styles/globals.css"
 
 function hexToVec4(hex) {
   let hexStr = hex.replace("#", "");

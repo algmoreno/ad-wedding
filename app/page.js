@@ -1,9 +1,10 @@
-import { Header, Landing, Booking } from '@/components/index';
+import {SaveDateCard, BookingCard } from '@/components/index';
 
 export default function Home() {
   return (
-    <div className=''>
-      <Landing />
+    <div className='py-8'>
+      <SaveDateCard />
+      <BookingCard />
     </div>
   );
 }

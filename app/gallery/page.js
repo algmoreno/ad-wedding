@@ -1,8 +1,10 @@
-import React from 'react'
+import { Gallery } from '@/components/index';
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className='py-8'>
+      <Gallery />
+    </div>
   )
 }
 

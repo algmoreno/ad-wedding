@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Booking = () => {
+const BookingCard = () => {
   return (
     <div id="booking" className="bg-6-1 mt-20 flex max-w-7xl h-[700px] m-auto overflow-hidden shadow-sm font-primary drop-shadow-xl/50 rounded-sm border-8 border-double border-white">
         <div className="relative w-full ">
@@ -14,4 +14,4 @@ const Booking = () => {
   )
 }
 
-export default Booking
+export default BookingCard
