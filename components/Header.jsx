@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <div className='font-bold'>
         <div className='flex px-2 sm:px-6 lg:px-8 font-header justify-center p-10'>
+          <a href="/">
             <GradientText 
             colors={["#000000", "#000000", "#ba1004", "#000000", "#ba1004"]} // #fffbeb #910000
             animationSpeed={20}
@@ -15,6 +16,7 @@ const Header = () => {
             >
                 Doli & Alan
             </GradientText>
+              </a>
 
         </div>
         <Navbar />
