@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Italianno&family=Luxurious+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Explora&family=Italianno&family=Luxurious+Script&display=swap');
 @import 'tailwindcss';
 
 
@@ -12,7 +12,7 @@ color: inherit;
 }
 
 .font-decorative {
-    font-family: "Carattere", cursive;
+    font-family: "Explora", serif;
     font-weight: 800;
     font-style: normal;
 }
