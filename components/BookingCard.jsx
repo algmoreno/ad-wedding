@@ -2,8 +2,8 @@ import React from 'react'
 
 const BookingCard = () => {
   return (
-    <div id="booking" className="bg-6-1 mt-20 flex max-w-7xl h-[700px] m-auto overflow-hidden shadow-sm font-primary drop-shadow-xl/50 rounded-sm border-8 border-double border-white">
-        <div className="relative w-full ">
+    <div id="booking" className="bg-6-1 mt-20 flex h-[700px] m-auto overflow-hidden shadow-sm font-primary drop-shadow-xl/50 rounded-sm border-8 border-double border-white">
+        <div className="relative w-full">
             <div className="absolute w-[85%] bg-6-1 inset-0 flex flex-col px-5 items-center justify-center text-white backdrop-blur-4xl drop-shadow-xl/90 text-center">
                 <h2 className="z-10 m-10 text-2xl sm:text-4xl text-shadow-sm/60 text-shadow-black">Travel & Accommodation Information:</h2>
                 <h2 className="z-10 mt-10 text-md sm:text-2xl underline decoration-white text-shadow-lg/60 text-shadow-black">Hilton El Conquistador Resort</h2>

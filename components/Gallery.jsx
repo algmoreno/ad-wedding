@@ -11,18 +11,18 @@ const images = [
 
 const Gallery = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 max-w-4xl h-[700px] m-auto overflow-hidden font-header ">
-        <div className="flex w-full items-center">
+    <div className="grid grid-cols-1 gap-4 max-w-2xl h-[700px] m-auto overflow-hidden font-header ">
+        <div className="flex w-full justify-center items-center">
             <Stack
             randomRotation={true}
             sensitivity={180}
             sendToBackOnClick={false}
-            cardDimensions={{ width: 400, height: 400 }}
+            cardDimensions={{ width: 300, height: 400 }}
             cardsData={images}
             />
         </div>
         <div className="shadow-sm font-header drop-shadow-xl/50 rounded-sm border-8 border-double border-gray-900">
-            <p>
+            <p className="p-5">
                 This story begins.
             </p>
         </div>

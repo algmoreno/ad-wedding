@@ -187,14 +187,17 @@ color: inherit;
 .stack-container {
     position: relative;
     perspective: 600px;
+    justify-content: center;
 }
   
 .card-rotate {
     position: absolute;
     cursor: grab;
+    justify-content: center;
 }
 
 .card {
+    margin: auto;
     border-radius: 20px;
     border: 5px solid #fff;
     overflow: hidden;
