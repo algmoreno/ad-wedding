@@ -148,7 +148,7 @@ color: inherit;
     background-attachment: fixed;
     background-size: 1200px;
     background-position: -50% 20%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(252, 209, 209), transparent);
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
 }
