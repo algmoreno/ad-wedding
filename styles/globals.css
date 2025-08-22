@@ -212,7 +212,7 @@ color: inherit;
 }
 
 .bg-primary {
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(102, 70, 2, 0.5));
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
 }
 
 .bg-gray-gradient {
