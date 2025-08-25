@@ -17,9 +17,9 @@ const SaveDateCard = () => {
         <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
         <div className="absolute inset-0 balatro-custom-1 pointer-events-none" />
         <h2 className="text-2xl font-extrabold sm:text-2xl z-10 mr-auto ml-5 text-white text-shadow-lg text-shadow-gray-600 text-left">Join us...</h2>
-        <h2 className="text-5xl font-extrabold sm:text-6xl z-10 mt-50 mr-auto ml-5 text-black/90 text-shadow-lg text-shadow-sky-200/30 text-left">Saturday, April 18, 2026</h2>
-        <h2 className="text-4xl font-extrabold sm:text-4xl z-10 mt-10 mr-auto ml-5 text-black text-shadow-lg text-shadow-sky-200/30 text-left">Hilton El Conquistador Resort</h2>
-        <h1 className="text-4xl font-extrabold sm:text-4xl z-10 mt-10 mr-auto ml-5 text-black text-shadow-lg text-shadow-sky-200/30 text-left">Tucson, AZ</h1>
+        <h2 className="text-5xl font-extrabold sm:text-6xl z-10 mt-50 mr-auto ml-5 text-black/90 text-shadow-lg text-shadow-white-200/30 text-left">Saturday, April 18, 2026</h2>
+        <h2 className="text-4xl font-extrabold sm:text-4xl z-10 mt-10 mr-auto ml-5 text-black text-shadow-lg text-shadow-white-200/30 text-left">Hilton El Conquistador Resort</h2>
+        <h1 className="text-4xl font-extrabold sm:text-4xl z-10 mt-10 mr-auto ml-5 text-black text-shadow-lg text-shadow-white-200/30 text-left">Tucson, AZ</h1>
         </div>
     </div>
   )
