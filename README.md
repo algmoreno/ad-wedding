@@ -40,5 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - resize gallery stack based on mobile vs large screen
 - write story for gallery page
 - mobile styling
-- add directions to hotel, hotel link, Tucson Intl Airport
-- tab icon
+- hotel link

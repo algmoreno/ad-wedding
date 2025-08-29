@@ -6,7 +6,7 @@ import GradientText from './GradientText'
 const Header = () => {
   return (
     <div className='font-bold'>
-        <div className='flex px-2 sm:px-6 lg:px-8 font-header justify-center p-10'>
+        <div className='flex px-2 sm:px-6 lg:px-8 font-header justify-center p-10 text-center'>
           <a href="/">
             <GradientText 
             colors={["#000000", "#000000", "#ba1004", "#000000", "#ba1004"]} // #fffbeb #910000
@@ -16,7 +16,8 @@ const Header = () => {
             >
                 Doli & Alan
             </GradientText>
-              </a>
+          </a>
+          <img className="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px]" src="/assets/favicon.png" />
 
         </div>
         <Navbar />

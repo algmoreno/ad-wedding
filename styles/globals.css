@@ -235,11 +235,11 @@ color: inherit;
     linear-gradient(336deg, rgba(59, 59, 59, 0.8), transparent 70.71%);
 }
 
-.bg-desert {
-  background-image: url(/assets/desert.jpg);
+.bg-favicon {
+  background-image: url(/assets/favicon.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 80%;
+  background-size: 20%;
 }
 
 .bg-0 {
