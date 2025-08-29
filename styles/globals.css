@@ -303,6 +303,6 @@ color: inherit;
   backdrop-filter: invert(-10%);
   background-repeat:repeat;
   background-attachment: fixed;
-  background-size: 700px;
-  background-position: -200% 50%;
+  background-size: 600px;
+  background-position: -180% 50%;
 }
