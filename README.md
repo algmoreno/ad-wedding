@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## TODO
 
-- resize gallery stack based on mobile vs large screen
-- write story for gallery page
 - fix mobile navbar menu
 - mobile styling
+- resize gallery stack based on mobile vs large screen
+- write story for gallery page
