@@ -8,15 +8,15 @@ const BookingCard = () => {
                 <h2 className="z-10 m-10 text-2xl sm:text-4xl text-shadow-sm/60 text-shadow-black">Travel & Accommodation Information:</h2>
                 <div className="grid grid-cols-2 gap-4">
                   <img className="w-auto height-auto border-1" src="/assets/desert.jpg" />
-                  <div>
-                    <h2 className="z-10 mt-10 text-md sm:text-2xl underline decoration-white text-shadow-sm/60 text-shadow-black">Hilton El Conquistador Resort</h2>
+                  <div className="text-center">
+                    <h2 className="z-10 sm:mt-10 text-md sm:text-2xl underline decoration-white text-shadow-sm/60 text-shadow-black">Hilton El Conquistador Resort</h2>
                     <h2 className="z-10 mt-1 text-md sm:text-2xl text-shadow-sm/60 text-shadow-black">10000 N Oracle Rd, Tucson, AZ 85704</h2>
                   </div>
-                  <div>
+                  <img className="m-auto w-auto height-auto" src="/assets/airport_icon.png" />
+                  <div className="text-center">
                     <h2 className="z-10 mt-10 text-md sm:text-2xl underline decoration-white text-shadow-sm/60 text-shadow-black">Tucson International Airport</h2>
-                    <h2 className="z-10 mt-1 text-md sm:text-2xl text-shadow-sm/60 text-shadow-black">10000 N Oracle Rd, Tucson, AZ 85704</h2>
+                    <h2 className="z-10 mt-1 text-md sm:text-2xl text-shadow-sm/60 text-shadow-black">7250 S Tucson Blvd, Tucson, AZ 85756</h2>
                   </div>
-                  <img className="w-auto height-auto border-1" src="/assets/desert.jpg" />
                 </div>                
             </div>
         </div>
