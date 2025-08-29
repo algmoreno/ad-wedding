@@ -235,6 +235,13 @@ color: inherit;
     linear-gradient(336deg, rgba(59, 59, 59, 0.8), transparent 70.71%);
 }
 
+.bg-desert {
+  background-image: url(/assets/desert.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 80%;
+}
+
 .bg-0 {
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;
