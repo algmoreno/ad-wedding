@@ -37,7 +37,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## TODO
 
+<<<<<<< HEAD
 - fix mobile navbar menu
 - mobile styling
 - resize gallery stack based on mobile vs large screen
 - write story for gallery page
+=======
+- resize gallery stack based on mobile vs large screen
+- write story for gallery page
+- mobile styling
+- add directions to hotel, hotel link, Tucson Intl Airport
+>>>>>>> 376c19aaafe8bf5a2f70eedb9eae510f77001533
