@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Explora&family=Italianno&family=Luxurious+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poiret+One&family=Tangerine:wght@400;700&display=swap');
 @import 'tailwindcss';
 
 
@@ -12,9 +12,9 @@ color: inherit;
 }
 
 .font-decorative {
-    font-family: "Explora", serif;
-    font-weight: 800;
-    font-style: normal;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .font-primary {
@@ -153,6 +153,19 @@ color: inherit;
     -webkit-mask-size: cover;
 }
 
+.balatro-custom-1 {
+  background-color: transparent;
+  background-image:
+  linear-gradient(rgba(133, 56, 12, 0.4), rgba(255, 255, 255, 0.3)),
+  url("/assets/tree_pattern.png");
+  backdrop-filter: invert(95px);
+  background-attachment: fixed;
+  background-size: 800px;
+  background-position: 0% 20%;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
 /* .balatro-custom-sm {
     background-color: transparent;
     background-image:
@@ -212,7 +225,7 @@ color: inherit;
 }
 
 .bg-primary {
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(102, 70, 2, 0.5));
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
 }
 
 .bg-gray-gradient {
@@ -280,4 +293,16 @@ color: inherit;
     background-attachment: fixed;
     background-size: 1000px;
     background-position: -200% 50%;
+}
+
+.bg-6-1 {
+  background-image:
+  linear-gradient(rgba(133, 82, 12, 0.4), rgba(255, 255, 255, 0.3)),
+  url("/assets/tree_pattern.png");
+  backdrop-filter: blur(2px);
+  backdrop-filter: invert(-10%);
+  background-repeat:repeat;
+  background-attachment: fixed;
+  background-size: 700px;
+  background-position: -200% 50%;
 }
