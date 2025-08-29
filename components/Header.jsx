@@ -17,9 +17,9 @@ const Header = () => {
                 Doli & Alan
             </GradientText>
           </a>
-          <img className="w-[50px] h-[50px] sm:w-[100px] sm:h-[100px]" src="/assets/favicon.png" />
-
+          <img className="max-md:hidden w-[100px] h-[100px]" src="/assets/favicon.png" />
         </div>
+        <img className="sm:hidden m-auto w-[100px] h-[100px] sm:w-[100px] sm:h-[100px]" src="/assets/favicon.png" />
         <Navbar />
     </div>
   )
