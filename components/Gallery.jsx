@@ -20,7 +20,7 @@ const Gallery = () => {
     <div className="grid grid-cols-1 gap-4 max-w-2xl h-auto m-auto overflow-hidden font-header ">
         <div className="flex w-full justify-center items-center">
             <Stack
-            randomRotation={true}
+            randomRotation={false}
             sensitivity={180}
             sendToBackOnClick={false}
             cardDimensions={{ width: 300, height: 400 }}
