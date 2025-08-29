@@ -17,7 +17,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 max-w-2xl h-[700px] m-auto overflow-hidden font-header ">
+    <div className="grid grid-cols-1 gap-4 max-w-2xl h-auto m-auto overflow-hidden font-header ">
         <div className="flex w-full justify-center items-center">
             <Stack
             randomRotation={true}
@@ -27,9 +27,14 @@ const Gallery = () => {
             cardsData={images}
             />
         </div>
-        <div className="shadow-sm font-header drop-shadow-xl/50 rounded-sm border-8 border-double border-gray-900">
-            <p className="p-5">
-                This story begins.
+        <div className="h-full shadow-sm font-header drop-shadow-xl/50 rounded-sm text-center p-5">
+            <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Perspiciatis sunt consectetur necessitatibus expedita nulla, dolor consequatur laborum vel dolores, exercitationem, provident unde et ipsum recusandae. Nobis amet a ullam nam?
+            </p>
+            <p className="mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Perspiciatis sunt consectetur necessitatibus expedita nulla, dolor consequatur laborum vel dolores, exercitationem, provident unde et ipsum recusandae. Nobis amet a ullam nam?
             </p>
         </div>
 
