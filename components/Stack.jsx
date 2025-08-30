@@ -109,8 +109,8 @@ export default function GalleryStack({
               onClick={() => sendToBackOnClick && sendToBack(card.id)}
               animate={{
                 rotateZ: fanAngle,
-                scale: 1 + index * 0.06 - cards.length * 0.06,
-                transformOrigin: "90% 90%"
+                scale: 1,   // each card slightly smaller behind
+                transformOrigin: "50% 50%" // keep scaling/rotation centered
               }}
               initial={false}
               transition={{

@@ -212,7 +212,7 @@ color: inherit;
 .card {
     margin: auto;
     border-radius: 20px;
-    border: 5px solid #fff;
+    border: 5px solid #4f1c00;
     overflow: hidden;
 }
 
@@ -312,4 +312,14 @@ color: inherit;
   background-attachment: fixed;
   background-size: 500px;
   background-position: -220% 50%;
+}
+
+.bg-6 {
+  background-image:
+  linear-gradient(rgba(255, 255, 255, 0.4), rgba(68, 40, 0, 0.3)),
+  url("/assets/plant_pattern_1.png");
+  background-repeat:repeat;
+  background-attachment: fixed;
+  background-size: 100px;
+  background-position: -2000% 50%;
 }
