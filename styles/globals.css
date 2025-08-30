@@ -160,8 +160,8 @@ color: inherit;
   url("/assets/tree_pattern.png");
   backdrop-filter: invert(95px);
   background-attachment: fixed;
-  background-size: 800px;
-  background-position: 0% 20%;
+  background-size: 1000px;
+  background-position: 20% 20%;
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
@@ -304,7 +304,7 @@ color: inherit;
 
 .bg-6-1 {
   background-image:
-  linear-gradient(rgba(206, 206, 206, 0.5), rgba(133, 82, 12, .6)),
+  linear-gradient(rgba(206, 206, 206, 0.5), rgba(79, 28, 0, .3)),
   url("/assets/tree_pattern.png");
   backdrop-filter: blur(2px);
   backdrop-filter: invert(-10%);
