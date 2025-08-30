@@ -38,6 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## TODO
 
 - write story for gallery page
-- mobile styling
 - hotel link
-- fix gallery large screens
+- add swipe indicator on gallery
