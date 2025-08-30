@@ -12,7 +12,7 @@ import Silk from './Silk';
 
 const SaveDateCard = () => {
   return (
-    <div className="relative w-full bg-gray-200 flex max-w-4xl h-[700px] m-auto overflow-hidden shadow-sm font-header drop-shadow-xl/50 rounded-sm border-l-12 border-double border-white">
+    <div className="relative w-full bg-gray-200 flex max-w-2xl h-[700px] m-auto overflow-hidden shadow-sm font-header drop-shadow-xl/50 rounded-sm border-l-12 border-double border-white">
       <div className="absolute inset-0 flex flex-col justify-center">
         <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
         <div className="absolute inset-0 balatro-custom-1 pointer-events-none" />
