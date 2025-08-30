@@ -2,10 +2,10 @@ import React from 'react'
 
 const BookingCard = () => {
   return (
-    <div id="booking" className="flex bg-6-1 mt-20 h-[1000px] max-w-6xl m-auto overflow-hidden shadow-sm font-decorative drop-shadow-xl/50 rounded-sm border-l-12 border-double border-white">
+    <div id="booking" className="flex bg-6-1 mt-20 h-[1000px] max-w-6xl m-auto overflow-hidden shadow-sm font-decorative drop-shadow-sm/80 rounded-sm border-l-12 border-double border-white">
         <div className="relative w-full">
             <div className="absolute max-w-3xl bg-6-1 inset-0 flex flex-col sm:px-5 items-center justify-center text-white backdrop-blur-4xl drop-shadow-xl/90 text-left">
-                <h2 className="z-10 m-10 text-2xl sm:text-4xl text-shadow-sm/60 text-shadow-black">Travel & Accommodation Information:</h2>
+                <h2 className="z-10 ml-5 mt-10 text-2xl sm:text-4xl text-shadow-sm/60 text-shadow-black">Travel & Accommodation Information:</h2>
                 <div className="grid sm:grid-cols-2 sm:gap-20 sm:mt-20">
                   <img className="w-auto mt-10 height-auto" src="/assets/desert.jpg" />
                   <div className="text-center mt-6 sm:mt-20">

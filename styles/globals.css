@@ -304,7 +304,7 @@ color: inherit;
 
 .bg-6-1 {
   background-image:
-  linear-gradient(rgba(133, 82, 12, 0.4), rgba(255, 255, 255, 0.3)),
+  linear-gradient(rgba(206, 206, 206, 0.5), rgba(133, 82, 12, .6)),
   url("/assets/tree_pattern.png");
   backdrop-filter: blur(2px);
   backdrop-filter: invert(-10%);
