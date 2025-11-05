@@ -3,6 +3,7 @@ export { default as Navbar } from './Navbar';
 export { default as SaveDateCard } from './SaveDateCard';
 export { default as BookingCard } from './BookingCard';
 export { default as Gallery } from './Gallery';
+export { default as RsvpForm } from './RsvpForm';
 
 /* External components */
 export { default as Stack } from './Stack';
