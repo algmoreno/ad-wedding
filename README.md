@@ -37,6 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## TODO
 
+- add picture to home page
 - write story for gallery page
-- hotel link
+- hotel link / group info
+- wedding email
 - add swipe indicator on gallery
