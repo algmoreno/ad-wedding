@@ -17,7 +17,7 @@ const PreRsvpForm = () => {
       <div className="w-full max-w-sm space-y-10">
         <div>
           <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">
-            Enter your RSVP code or scan QR code
+            Enter your Party ID or scan QR code
           </h2>
         </div>
 
@@ -26,7 +26,7 @@ const PreRsvpForm = () => {
             <div className="col-span-2">
               <input
                 id="rsvp-code"
-                value={partyCode}
+                value={rsvpCode}
                 onChange={(e) => setRsvpCode(e.target.value)}
                 required
                 placeholder="ABC123"
