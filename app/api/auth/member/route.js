@@ -20,7 +20,7 @@ export async function POST(req){
     const newMember = await Member.create({ party: party._id, firstName, lastName }); 
   
     // pushing Member object ref to party Member array
-    party.Members.push(newMember._id);
+    party.members.push(newMember._id);
     await party.save();
 
     return NextResponse.json({ message: "Member added!" }, { status: 201 });

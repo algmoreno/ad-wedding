@@ -5,7 +5,6 @@ import { NextResponse } from 'next/server';
 
 // Create new party
 export async function POST(req){
-  console.log("new party request")
   try {
     await mongoClient(); 
     const { partyId, fridayInvite } = await req.json();
