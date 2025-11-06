@@ -5,6 +5,9 @@ const memberSchema = new Schema({
   firstName: {type: String, required: true },
   lastName: {type: String, required: true },
   dietaryRestrictions: {type: String, required: false },
+  attendingFriday: {type: Boolean, required: false },
+  attendingCeremony: {type: Boolean, required: false },
+  attendingReception: {type: Boolean, required: false },
 })
 
 const Member = models.Member || model("Member", memberSchema);

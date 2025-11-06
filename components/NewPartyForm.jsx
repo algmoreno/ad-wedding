@@ -6,6 +6,11 @@ const NewPartyForm = () => {
   let [rsvpCode, setRsvpCode] = useState("")
   let [fridayInvite, setFridayInvite] = useState(false)
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    router.push(`/rsvp/${rsvpCode}`); 
+  };
+
   return (
     <>
       <div className="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
@@ -15,7 +20,7 @@ const NewPartyForm = () => {
               Create Party
             </h2>
           </div>
-          <form action="#" method="POST" className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <div className="col-span-2">
               <input
