@@ -4,7 +4,7 @@ import Member from "@/app/models/Member";
 import Party from "@/app/models/Party";
 import { NextResponse } from 'next/server';
 
-// Get party Members
+// Get party members
 export async function GET(req, context) {
   const params = await context.params;
   try {
@@ -12,7 +12,7 @@ export async function GET(req, context) {
     const member = await Member.findById(params.id).populate("party");
 
     if (!member) {
-      return NextResponse.json({ message: "Member not found" }, { status: 404 });
+      return NextResponse.json({ message: "member not found" }, { status: 404 });
     }
 
     return NextResponse.json({ member }, { status: 201 });

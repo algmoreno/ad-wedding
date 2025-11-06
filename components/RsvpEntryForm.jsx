@@ -5,11 +5,11 @@ import { useRouter } from 'next/navigation';
 
 const PreRsvpForm = () => {
   const router = useRouter();
-  let [partyCode, setPartyCode] = useState("")
+  let [rsvpCode, setRsvpCode] = useState("")
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    router.push(`/rsvp/${partyCode}`); 
+    router.push(`/rsvp/${rsvpCode}`); 
   };
 
   return (
@@ -17,7 +17,7 @@ const PreRsvpForm = () => {
       <div className="w-full max-w-sm space-y-10">
         <div>
           <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">
-            Enter your party code or scan QR code
+            Enter your RSVP code or scan QR code
           </h2>
         </div>
 
@@ -25,9 +25,9 @@ const PreRsvpForm = () => {
           <div>
             <div className="col-span-2">
               <input
-                id="party-code"
+                id="rsvp-code"
                 value={partyCode}
-                onChange={(e) => setPartyCode(e.target.value)}
+                onChange={(e) => setRsvpCode(e.target.value)}
                 required
                 placeholder="ABC123"
                 aria-label="Party code"
