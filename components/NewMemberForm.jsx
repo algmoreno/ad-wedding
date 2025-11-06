@@ -1,17 +1,33 @@
 'use client'
+import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
 
 const NewMemberForm = () => {
-  let [rsvpCode, setRsvpCode] = useState("")
-  let [firstName, setFirstName] = useState("")
-  let [lastName, setLastName] = useState("")
-  let [dietaryRes, setDietaryRes] = useState("")
+  const [member, setMember] = useState({
+    partyId: "",
+    firstName: "",
+    lastName: ""
+  })
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
-    router.push(`/rsvp/${rsvpCode}`); 
-  };
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    setPending(false);
+    setError(null)
+
+    // add party
+    try {
+      const response = await axios.post('/api/auth/member', member)
+      setPending(false);
+      //toast.success(response.data.message);
+    } catch (err) {
+      console.log(err);
+      //setError(err.response.data.message);
+      setPending(false);
+    }
+  }
 
   return (
     <>
@@ -26,9 +42,9 @@ const NewMemberForm = () => {
             <div>
               <div className="col-span-2 mb-2">
                 <input
-                  id="rsvp-code"
-                  value={rsvpCode}
-                  onChange={(e) => setRsvpCode(e.target.value)}
+                  id="party-id"
+                  value={member.partyId}
+                  onChange={(e) => setMember({...member, partyId:e.target.value})}
                   required
                   placeholder="party id"
                   aria-label="Party code"
@@ -38,8 +54,8 @@ const NewMemberForm = () => {
               <div className="-mt-px mb-2">
                 <input
                     id="first-name"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    value={member.firstName}
+                    onChange={(e) => setMember({...member, firstName:e.target.value})}
                     required
                     placeholder="first name"
                     aria-label="first name"
@@ -49,8 +65,8 @@ const NewMemberForm = () => {
               <div className="-mt-px">
                 <input
                     id="last-name"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                    value={member.lastName}
+                    onChange={(e) => setMember({...member, lastName:e.target.value})}
                     required
                     placeholder="last name"
                     aria-label="last name"

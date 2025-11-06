@@ -1,15 +1,32 @@
 'use client'
+import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
 
 const NewPartyForm = () => {
-  let [rsvpCode, setRsvpCode] = useState("")
-  let [fridayInvite, setFridayInvite] = useState(false)
+  const [party, setParty] = useState({
+    partyId: "",
+    fridayInvite: false
+  })
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
-    router.push(`/rsvp/${rsvpCode}`); 
-  };
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    setPending(false);
+    setError(null)
+
+    // add party
+    try {
+      const response = await axios.post('/api/auth/party', party)
+      setPending(false);
+      toast.success(response.data.message);
+    } catch (err) {
+      console.log(err);
+      //setError(err.response.data.message);
+      setPending(false);
+    }
+  }
 
   return (
     <>
@@ -24,12 +41,12 @@ const NewPartyForm = () => {
             <div>
               <div className="col-span-2">
               <input
-                id="rsvp-code"
-                value={rsvpCode}
-                onChange={(e) => setRsvpCode(e.target.value)}
+                id="party-id"
+                value={party.partyId}
+                onChange={(e) => setParty({...party, partyId:e.target.value})}
                 required
                 placeholder="party id"
-                aria-label="Party code"
+                aria-label="Party id"
                 className="block w-full rounded-t-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:relative focus:outline-2 focus:outline-blue-600 sm:text-sm"
               />
               </div>
@@ -43,6 +60,8 @@ const NewPartyForm = () => {
                       id="remember-me"
                       name="remember-me"
                       type="checkbox"
+                      checked={party.fridayInvite}
+                      onChange={(e) => setParty({...party, fridayInvite:e.target.checked})}
                       className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-blue-600 checked:bg-blue-600 indeterminate:border-blue-600 indeterminate:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                     />
 

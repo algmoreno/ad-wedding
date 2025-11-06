@@ -1,40 +1,41 @@
 import { ObjectId } from "mongodb";
 import mongoClient from "@/app/lib/mongodb";
-import Member from "@/app/models/Member";
 import Party from "@/app/models/Party";
 import { NextResponse } from 'next/server';
 
-// Create new member
+// Create new party
 export async function POST(req){
+  console.log("new party request")
   try {
     await mongoClient(); 
-    const { partyId, startDatetime, endDatetime, price, service } = await req.json();
+    const { partyId, fridayInvite } = await req.json();
 
-    // Find the party
-    const party = await Party.findById(partyId);
-    if (!party) {
-      return NextResponse.json({ error: "Party not found" }, { status: 404 });
+    const partyExists = await Party.findOne({ partyId });
+    if (partyExists) {
+      return NextResponse.json({ message: "PartyId already in use." }, { status: 400 })
     }
-    //creating new member 
-    const newMember = await Member.create({ party: partyId, startDatetime, endDatetime, price, service }); 
 
-    // pushing member object ref to party member array
-    party.members.push(newMember._id);
-    await party.save();
+    const party = {
+      partyId, 
+      fridayInvite, 
+    }
 
-    return NextResponse.json({ message: "Member added!" }, { status: 201 });
+    const newParty = await Party.create(party); 
+    return NextResponse.json({ message: "Party successfully registered!" }, { status: 201 });
   } catch (err) {
-    return NextResponse.json({ error: err.message, status: 500 });
+    console.error('Error inserting party:', err);
+    return NextResponse.json({ message: "Something went wrong." },  { status: 500 });
   }
 }
 
-// Get all parties 
+// Get all parties
 export async function GET() {
   try {
     await mongoClient();
-    const members = await Member.find().populate("party");
-    return NextResponse.json({ members },  { status: 201 });
+    const parties = await Party.find();
+    return NextResponse.json({ parties },  { status: 201 });
   } catch (err) {
-    return new NextResponse.json({ error: err.message, status: 500 });
+    console.error('Error finding parties:', err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
