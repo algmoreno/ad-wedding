@@ -7,7 +7,7 @@ export { default as RsvpEntryForm } from './RsvpEntryForm';
 export { default as RsvpForm } from './RsvpForm';
 export { default as NewPartyForm } from './NewPartyForm';
 export { default as NewMemberForm } from './NewMemberForm';
-export { default as PartyList } from './PartyList';
+export { default as GuestList } from './GuestList';
 
 /* External components */
 export { default as Stack } from './Stack';

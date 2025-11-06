@@ -8,6 +8,11 @@ const NewMemberForm = () => {
   let [lastName, setLastName] = useState("")
   let [dietaryRes, setDietaryRes] = useState("")
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    router.push(`/rsvp/${rsvpCode}`); 
+  };
+
   return (
     <>
       <div className="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8 ">
@@ -17,7 +22,7 @@ const NewMemberForm = () => {
               Create Member
             </h2>
           </div>
-          <form action="#" method="POST" className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <div className="col-span-2 mb-2">
                 <input
