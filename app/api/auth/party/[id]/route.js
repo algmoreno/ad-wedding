@@ -1,61 +1,61 @@
 import { ObjectId } from "mongodb";
 import mongoClient from "@/app/lib/mongodb";
-import Member from "@/app/models/Member";
 import Party from "@/app/models/Party";
 import { NextResponse } from 'next/server';
 
-// Get party Members
+// Get party
 export async function GET(req, context) {
   const params = await context.params;
   try {
     await mongoClient();
-    const member = await Member.findById(params.id).populate("party");
+    const party = await Party.findById(params.id).populate("members")
 
-    if (!member) {
-      return NextResponse.json({ message: "Member not found" }, { status: 404 });
-    }
-
-    return NextResponse.json({ member }, { status: 201 });
+    return NextResponse.json({ party }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
 
-// Edit member
+// Edit party
 export async function PUT(req, context) {
   const params = await context.params;
   try {
     await mongoClient();
-    const update = await req.json();
-    const updatedMember = await Member.findByIdAndUpdate(params.id, update, { new: true });
+    const { firstName, lastName, email, password, confirmPassword } = await req.json();
 
-    if (!updatedMember) {
-      return NextResponse.json({ message: "Member not found" }, { status: 404 });
+    if (!params || !params.id) {
+      return NextResponse.json({ error: "Party ID is required" }, { status: 400 });
     }
 
-    return NextResponse.json({ message: "Member updated" }, { status: 200 });
+    const hashedPwd = await bcrypt.hash(password, 10);
+
+    const party = {
+      firstName, 
+      lastName, 
+      email, 
+      password: hashedPwd
+    }
+
+    const updatedParty = await Party.findByIdAndUpdate(params.id, party, { new: true })
+
+    return NextResponse.json({ message: "Party updated" }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
 
-// Delete member
+// Delete party
 export async function DELETE(req, context) {
   const params = await context.params;
   try {
     await mongoClient();
-    const { partyId } = await req.json();
-    const deletedMember = await Member.findByIdAndDelete(params.id);
+    const deletedParty = await Party.findByIdAndDelete(params.id);
 
-    if (!deletedMember) {
-      return NextResponse.json({ message: "Member not found" }, { status: 404 });
+    if (!deletedParty) {
+      return NextResponse.json({ error: "Party not found" }, { status: 404 });
     }
 
-    await Party.findByIdAndUpdate(partyId, {
-      $pull: { members: params.id }
-    });
-
-    return NextResponse.json({ message: "Member deleted" }, { status: 200 });
+    return NextResponse.json({ message: "Party deleted" }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }

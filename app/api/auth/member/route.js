@@ -8,19 +8,20 @@ import { NextResponse } from 'next/server';
 export async function POST(req){
   try {
     await mongoClient(); 
-    const { partyId, startDatetime, endDatetime, price, service } = await req.json();
+    const { partyId, firstName, lastName  } = await req.json();
 
     // Find the party
-    const party = await party.findById(partyId);
+    const party = await Party.findOne({ partyId });
     if (!party) {
       return NextResponse.json({ error: "party not found" }, { status: 404 });
     }
-    //creating new Member 
-    const newMember = await Member.create({ party: partyId, startDatetime, endDatetime, price, service }); 
 
+    //creating new Member 
+    const newMember = await Member.create({ party: party._id, firstName, lastName }); 
+  
     // pushing Member object ref to party Member array
     party.Members.push(newMember._id);
-    await.save();
+    await party.save();
 
     return NextResponse.json({ message: "Member added!" }, { status: 201 });
   } catch (err) {
