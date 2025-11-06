@@ -8,7 +8,7 @@ export async function GET(req, context) {
   const params = await context.params;
   try {
     await mongoClient();
-    const party = await Party.findById(params.id).populate("members")
+    const party = await Party.findOne({ partyId: params.id }).populate("members")
 
     return NextResponse.json({ party }, { status: 200 });
   } catch (err) {
