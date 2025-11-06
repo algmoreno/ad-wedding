@@ -38,6 +38,12 @@ const GuestList = () => {
                   scope="col"
                   className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
                 >
+                  Party ID
+                </th>
+                <th
+                  scope="col"
+                  className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
+                >
                   Friday Dinner
                 </th>
                 <th
@@ -59,12 +65,13 @@ const GuestList = () => {
             </thead>
             <tbody>
               {members.map((member) => (
-                <tr key={member.email}>
+                <tr key={member.firstName}>
                   <td className="relative py-4 pr-3 text-sm font-medium text-gray-900">
                     {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
                     <div className="absolute right-full bottom-0 h-px w-screen bg-gray-100" />
                     <div className="absolute bottom-0 left-0 h-px w-screen bg-gray-100" />
                   </td>
+                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
                   <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.attendingFriday}</td>
                   <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.attendingCeremony}</td>
                   <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.attendingReception}</td>

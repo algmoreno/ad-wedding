@@ -1,28 +1,29 @@
 'use client'
+import axios from 'axios';
 import React from 'react'
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 
 const RsvpForm = ({ params }) => {
   const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [members, setMembers] = useState([]);
+ 
 
-  const people = [
-    { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-    { name: 'Courtney Henry', title: 'Designer', email: 'courtney.henry@example.com', role: 'Admin' },
-    { name: 'Tom Cook', title: 'Director of Product', email: 'tom.cook@example.com', role: 'Member' },
-    { name: 'Whitney Francis', title: 'Copywriter', email: 'whitney.francis@example.com', role: 'Admin' },
-    { name: 'Leonard Krasner', title: 'Senior Designer', email: 'leonard.krasner@example.com', role: 'Owner' },
-    { name: 'Floyd Miles', title: 'Principal Designer', email: 'floyd.miles@example.com', role: 'Member' },
-  ]
-  // get party details
+  // get party using id
   useEffect(() => {
-    if (id) {
-      console.log(id)
-      // axios.get(`/api/auth/party/${id}`)
-      //   .then(res =>{setAppointment(res.data.appointment)})
-      //   .catch(err => console.error(err));
+    axios.get(`/api/auth/party/${id}`)
+      .then(res =>{console.log(res);setMembers(res.data.party.members); setLoading(false)})
+      .catch(err => console.error(err));
+  }, []);
+
+    // Make names uppercase 
+    function capitalizeFirstLetter(name) {
+      if (typeof name !== 'string' || name.length === 0) {
+        return name; // Handle non-string or empty inputs
+      }
+      return name.charAt(0).toUpperCase() + name.slice(1);
     }
-  }, [id]);
 
   return (
     <div className="px-4 sm:px-6 lg:px-8">
@@ -30,7 +31,7 @@ const RsvpForm = ({ params }) => {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <p className="mt-2 text-sm text-gray-700">
-            Please select all event each person will be attending
+            Please select all events each person will be attending
           </p>
         </div>
 
@@ -59,14 +60,17 @@ const RsvpForm = ({ params }) => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {people.map((person) => (
-                  <tr key={person.email} className="divide-x divide-gray-200">
+                {members.map((member) => (
+                  
+                  <tr key={member._id} className="divide-x divide-gray-200">
                     <td className="py-4 pr-4 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">
-                      {person.name}
+                    {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
                     </td>
-                    <td className="p-4 text-sm whitespace-nowrap text-gray-500">{person.title}</td>
-                    <td className="p-4 text-sm whitespace-nowrap text-gray-500">{person.email}</td>
-                    <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-500 sm:pr-0">{person.role}</td>
+                    
+                    <td className="p-4 text-sm whitespace-nowrap text-gray-500">{member.attendingFriday}</td>
+                    <td className="p-4 text-sm whitespace-nowrap text-gray-500">{member.attendingCeremony}</td>
+                    <td className="p-4 text-sm whitespace-nowrap text-gray-500">{member.attendingReception}</td>
+                    <td className="p-4 text-sm whitespace-nowrap text-gray-500">{member.dietaryRestrictions}</td>
                   </tr>
                 ))}
               </tbody>
