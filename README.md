@@ -47,4 +47,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - change 'friday dinner' to real event name
 - add loading bar
 
+  guest page
+- attendance counter functions
+
 - registry

@@ -8,7 +8,7 @@ const page = () => {
         <GuestList />
       </div>
 
-      <div className='flex py-8 items-center'>
+      <div className='flex items-center'>
         <div className="flex m-auto">
           <NewPartyForm />
           <NewMemberForm />

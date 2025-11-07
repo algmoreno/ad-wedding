@@ -31,9 +31,9 @@ const GuestList = () => {
   }
 
   return (
-    <div>
-      <div className="mt-8 flow-root overflow-hidden bg-white border-2 m-2 font-business">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="block">
+      <div className="m-auto mt-8 flow-root overflow-scroll h-[400px] w-[1500px] bg-white border-2 font-business">
+        <div className="m-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <table className="w-full text-left">
             <thead className="bg-white">
               <tr>
@@ -90,7 +90,7 @@ const GuestList = () => {
           </table>
         </div>
       </div>
-      <div className="flex p-2 border-1 gap-6 items-center font-business bg-black ">
+      <div className="flex m-auto p-2 border-1 gap-6 items-center w-[1500px] font-business bg-black ">
           <div className="m-auto">
             <div className="flex gap-20 text-blue-500">
             <h1 className="text-xl">
