@@ -9,8 +9,6 @@ export async function GET(req, context) {
   try {
     await mongoClient();
     const party = await Party.findOne({ partyId: params.id }).populate("members");
-    console.log("party found")
-    console.log(party)
     return NextResponse.json({ party }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });

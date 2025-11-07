@@ -44,6 +44,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - add swipe indicator on gallery
 
 - rsvp page
+- rsvp code to lowercase
 - finish backend party / members
 - get parties function
 
