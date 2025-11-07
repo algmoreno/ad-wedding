@@ -15,3 +15,5 @@ export { default as Stack } from './Stack';
 export { default as GradientText } from './GradientText';
 export { default as Balatro } from './Balatro';
 export { default as Iridescence } from './Iridescence';
+export { default as CustomLoader } from './CustomLoader';
+export { default as HeartLoader } from './HeartLoader';
