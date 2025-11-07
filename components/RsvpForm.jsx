@@ -7,25 +7,44 @@ import { useParams, useRouter } from "next/navigation";
 const RsvpForm = ({ params }) => {
   const { id } = useParams();
   const [members, setMembers] = useState([]);
+  const [party, setParty] = useState();
   const [loading, setLoading] = useState(true);
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState(null);
  
 
   // get party using id
   useEffect(() => {
     axios.get(`/api/auth/party/${id}`)
-      .then(res =>{console.log(res);setMembers(res.data.party.members); setLoading(false)})
+      .then(res =>{console.log(res);setMembers(res.data.party.members); setParty(res.data.party);setLoading(false)})
       .catch(err => console.error(err));
   }, []);
 
-    // Make names uppercase 
-    function capitalizeFirstLetter(name) {
-      if (typeof name !== 'string' || name.length === 0) {
-        return name; // Handle non-string or empty inputs
-      }
-      return name.charAt(0).toUpperCase() + name.slice(1);
-    }
+  const handleSave = async(e) => {
+    e.preventDefault();
+    setPending(false);
+    setError(null)
+    console.log(party)
+    // add party
+    // try {
+    //   const response = await axios.post('/api/auth/party', party)
+    //   setPending(false);
+    //   setParty({partyId: "", fridayInvite: false})
+    //   toast.success(response.data.message);
+    // } catch (err) {
+    //   console.log(err);
+    //   //setError(err.response.data.message);
+    //   setPending(false);
+    // }
+  }
 
-    
+  // Make first letter uppercase 
+  function capitalizeFirstLetter(name) {
+    if (typeof name !== 'string' || name.length === 0) {
+      return name; // Handle non-string or empty inputs
+    }
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 mt-10">
@@ -49,9 +68,13 @@ const RsvpForm = ({ params }) => {
                   <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pl-0">
                     Name
                   </th>
+                  {party?.fridayInvite ? (
                   <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
                     Friday Dinner
                   </th>
+                  ) : (
+                    <></>
+                  )}
                   <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
                     Ceremony & Lunch
                   </th>
@@ -92,7 +115,7 @@ const RsvpForm = ({ params }) => {
               </tbody>
             </table>
             <div className="flex">
-              <button className="border-1 bg-blue-500 p-2 text-white mt-5 ml-auto rounded-md">save</button>
+              <button onClick={handleSave} className="border-1 bg-blue-500 p-2 text-white mt-5 ml-auto rounded-md">Save</button>
             </div>
           </div>
         </div>
