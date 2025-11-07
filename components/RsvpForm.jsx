@@ -3,6 +3,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 const RsvpForm = ({ params }) => {
   const { id } = useParams();
@@ -15,28 +16,60 @@ const RsvpForm = ({ params }) => {
 
   // get party using id
   useEffect(() => {
-    axios.get(`/api/auth/party/${id}`)
-      .then(res =>{console.log(res);setMembers(res.data.party.members); setParty(res.data.party);setLoading(false)})
-      .catch(err => console.error(err));
-  }, []);
+    axios
+      .get(`/api/auth/party/${id}`)
+      .then((res) => {
+        console.log(res)
+        setParty(res.data.party);
+        setMembers(res.data.party.members || []);
+        setLoading(false);
+      })
+      .catch((err) => console.error(err));
+  }, [id]);
 
   const handleSave = async(e) => {
     e.preventDefault();
     setPending(false);
     setError(null)
-    console.log(party)
-    // add party
-    // try {
-    //   const response = await axios.post('/api/auth/party', party)
-    //   setPending(false);
-    //   setParty({partyId: "", fridayInvite: false})
-    //   toast.success(response.data.message);
-    // } catch (err) {
-    //   console.log(err);
-    //   //setError(err.response.data.message);
-    //   setPending(false);
-    // }
+    console.log(members)
+    // update party
+    try {
+      const res = await fetch(`/api/auth/party/${party.partyId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ members }),
+      });
+      //toast.success(res.data.message);
+    } catch (err) {
+      console.log(err);
+      setError(err.response.data.message);
+      setPending(false);
+    }
   }
+
+  const handleCheckboxChange = (index, field) => {
+    setMembers((prev) => {
+      if (!prev[index]) return prev; // safety guard
+      const updated = [...prev];
+      updated[index] = {
+        ...updated[index],
+        [field]: !updated[index][field],
+      };
+      return updated;
+    });
+  };
+
+  const handleMemberChange = (index, field, value) => {
+    setMembers((prev) => {
+      if (!prev[index]) return prev;
+      const updated = [...prev];
+      updated[index] = {
+        ...updated[index],
+        [field]: value,
+      };
+      return updated;
+    });
+  };
 
   // Make first letter uppercase 
   function capitalizeFirstLetter(name) {
@@ -45,6 +78,8 @@ const RsvpForm = ({ params }) => {
     }
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 mt-10">
@@ -87,27 +122,34 @@ const RsvpForm = ({ params }) => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white p-2">
-                {members.map((member) => (
+                {members.map((member, index) => (
                   <tr key={member._id} className="divide-x divide-gray-200 text-center">
                     <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">
                     {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
                     </td>
+                    {party?.fridayInvite ? (                    
                     <td>
-                      <input type="checkbox" checked={member.attendingFriday} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+                      <input type="checkbox" checked={!!member.attendingFriday} onChange={() => handleCheckboxChange(index, "attendingFriday")} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+                    </td>) : (
+                      <></>
+                    )}
+                    <td>
+                      <input type="checkbox" checked={!!member.attendingCeremony} onChange={() => handleCheckboxChange(index, "attendingCeremony")} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
                     </td>
                     <td>
-                      <input type="checkbox" checked={member.attendingCeremony} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
-                    </td>
-                    <td>
-                      <input type="checkbox" checked={member.attendingReception} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
+                      <input type="checkbox" checked={!!member.attendingReception} onChange={() => handleCheckboxChange(index, "attendingReception")} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
                     </td>
                     <td>
                       <textarea
-                        id="comment"
-                        name="comment"
+                        id={`dietaryRestrictions-${index}`}
+                        name="dietaryRestrictions"
                         rows={2}
-                        className="flex w-full m-auto rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
-                        defaultValue={''}
+                        placeholder="e.g., vegetarian, no peanuts"
+                        value={member.dietaryRestrictions || ""}
+                        onChange={(e) =>
+                          handleMemberChange(index, "dietaryRestrictions", e.target.value)
+                        }
+                        className="flex w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-blue-600 sm:text-sm"
                       />
                     </td>
                   </tr>
