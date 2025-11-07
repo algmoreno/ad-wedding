@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '@/components/index';
+import { Header, Toaster } from '@/components/index';
 import "@/styles/globals.css";
 
 
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <Header />
         </header>
         <main >
+          <Toaster position="bottom-center"/>
           {children}
         </main>
         <footer>
