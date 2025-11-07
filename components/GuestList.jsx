@@ -22,6 +22,14 @@ const GuestList = () => {
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
+  function boolToYesNo(attendingBool) {
+    if (attendingBool) {
+      return "yes"
+    }else {
+      return "no"
+    }
+  }
+
   return (
     <div>
       <div className="mt-8 flow-root overflow-hidden bg-white border-2 m-2 font-business">
@@ -72,9 +80,9 @@ const GuestList = () => {
                     <div className="absolute bottom-0 left-0 h-px w-screen bg-gray-100" />
                   </td>
                   <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.attendingFriday}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.attendingCeremony}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.attendingReception}</td>
+                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingFriday)}</td>
+                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingCeremony)}</td>
+                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingReception)}</td>
                   <td className="hidden px-3 py-4 text-sm text-gray-500 md:table-cell">{member.dietaryRestrictions}</td>
                 </tr>
               ))}
