@@ -1,4 +1,5 @@
 import { Schema, model, models } from 'mongoose';
+import Member from "./Member"; 
 
 const partySchema = new Schema({
   partyId: { type: String, required: true },
