@@ -40,6 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - hotel link / group info
 - wedding email
 
+- details page
+
 - write story for gallery page
 - add swipe indicator on gallery
 
@@ -49,5 +51,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
   guest page
 - attendance counter functions
+- enter all names and parties
 
 - registry

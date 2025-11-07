@@ -27,19 +27,12 @@ const GuestList = () => {
   }
 
   function attendanceCount(event) {
-    let count = 0
-    members.forEach((member, index) => {
-      if (member.attendingFriday && event == "friday") {
-        count++
-      }
-      if (member.attendingCeremony && event == "ceremony") {
-        count++
-      }
-      if (member.attendingReception && event == "reception") {
-        count++
-      }
-    })
-    return count
+    return members.reduce((count, member) => {
+      if (event === "friday" && member.attendingFriday) return count + 1;
+      if (event === "ceremony" && member.attendingCeremony) return count + 1;
+      if (event === "reception" && member.attendingReception) return count + 1;
+      return count;
+    }, 0);
   }
 
   // Convert bool to yes or no
@@ -58,6 +51,12 @@ const GuestList = () => {
           <table className="w-full text-left">
             <thead className="bg-white">
               <tr>
+                <th
+                  scope="col"
+                  className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
+                >
+                  #
+                </th>
                 <th scope="col" className="relative isolate py-3.5 pr-3 text-left text-sm font-semibold text-gray-900">
                   Name
                   <div className="absolute inset-y-0 right-full -z-10 w-screen border-b border-b-gray-200" />
@@ -93,8 +92,9 @@ const GuestList = () => {
               </tr>
             </thead>
             <tbody>
-              {members.map((member) => (
+              {members.map((member, index) => (
                 <tr key={member._id}>
+                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{index+1}</td>
                   <td className="relative py-4 pr-3 text-sm font-medium text-gray-900">
                     {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
                     <div className="absolute right-full bottom-0 h-px w-screen bg-gray-100" />
@@ -115,7 +115,7 @@ const GuestList = () => {
           <div className="m-auto">
             <div className="flex gap-20 text-blue-500">
             <h1 className="text-xl">
-              Totals
+              Total: {members.length}
             </h1>
               <h1>
                 Friday: {attendanceCount("friday")}
