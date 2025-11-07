@@ -6,12 +6,16 @@ import { useState, useEffect } from 'react';
 const GuestList = () => {
   const [members, setMembers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [fridayCount, setFridayCount] = useState(0)
+  const [ceremonyCount, setCeremonyCount] = useState(0)
+  const [receptionCount, setReceptionCount] = useState(0)
 
   // get all members
   useEffect(() => {
     axios.get(`/api/auth/member/`)
-      .then(res =>{console.log(res);setMembers(res.data.Members); setLoading(false)})
+      .then(res =>{console.log(res);setMembers(res.data.Members); setLoading(false); attendanceCount()})
       .catch(err => console.error(err));
+    
   }, []);
 
   // Make names uppercase 
@@ -22,6 +26,23 @@ const GuestList = () => {
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
+  function attendanceCount(event) {
+    let count = 0
+    members.forEach((member, index) => {
+      if (member.attendingFriday && event == "friday") {
+        count++
+      }
+      if (member.attendingCeremony && event == "ceremony") {
+        count++
+      }
+      if (member.attendingReception && event == "reception") {
+        count++
+      }
+    })
+    return count
+  }
+
+  // Convert bool to yes or no
   function boolToYesNo(attendingBool) {
     if (attendingBool) {
       return "yes"
@@ -97,13 +118,13 @@ const GuestList = () => {
               Totals
             </h1>
               <h1>
-                Friday: 
+                Friday: {attendanceCount("friday")}
               </h1>
               <h1>
-                Ceremony & Lunch: 
+                Ceremony & Lunch: {attendanceCount("ceremony")}
               </h1>
               <h1>
-                Reception: 
+                Reception: {attendanceCount("reception")}
               </h1>
             </div>
           </div>
