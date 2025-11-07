@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
+import { toast } from "sonner";
 
 const NewPartyForm = () => {
   const [party, setParty] = useState({
@@ -20,6 +21,7 @@ const NewPartyForm = () => {
     try {
       const response = await axios.post('/api/auth/party', party)
       setPending(false);
+      setParty({partyId: "", fridayInvite: false})
       toast.success(response.data.message);
     } catch (err) {
       console.log(err);

@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
+import { toast } from "sonner";
 
 const NewMemberForm = () => {
   const [member, setMember] = useState({
@@ -21,7 +22,7 @@ const NewMemberForm = () => {
     try {
       const response = await axios.post('/api/auth/member', member)
       setPending(false);
-      //toast.success(response.data.message);
+      toast.success(response.data.message);
     } catch (err) {
       console.log(err);
       //setError(err.response.data.message);
