@@ -43,11 +43,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - write story for gallery page
 - add swipe indicator on gallery
 
-- rsvp page
+  rsvp page
 - change 'friday dinner' to real event name
 - add loading bar
-- rsvp code to lowercase
-- finish backend party / members
-- get parties function
 
 - registry

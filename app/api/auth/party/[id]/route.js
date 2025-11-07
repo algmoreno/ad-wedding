@@ -57,7 +57,7 @@ export async function PUT(req, context) {
     }
 
     const updatedParty = await Party.findOne({ partyId: params.id }).populate("members");
-    return NextResponse.json({ message: "Party updated", party: updatedParty, }, { status: 200 });
+    return NextResponse.json({ message: "Successfully saved!" }, { status: 201 })
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
