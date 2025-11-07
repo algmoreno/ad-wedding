@@ -8,7 +8,10 @@ const NewMemberForm = () => {
   const [member, setMember] = useState({
     partyId: "",
     firstName: "",
-    lastName: ""
+    lastName: "",
+    attendingFriday: false,
+    attendingCeremony: false,
+    attendingReception: false
   })
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);

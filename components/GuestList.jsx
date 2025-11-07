@@ -65,7 +65,7 @@ const GuestList = () => {
             </thead>
             <tbody>
               {members.map((member) => (
-                <tr key={member.firstName}>
+                <tr key={member._id}>
                   <td className="relative py-4 pr-3 text-sm font-medium text-gray-900">
                     {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
                     <div className="absolute right-full bottom-0 h-px w-screen bg-gray-100" />

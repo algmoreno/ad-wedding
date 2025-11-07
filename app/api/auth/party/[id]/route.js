@@ -1,6 +1,7 @@
 import { ObjectId } from "mongodb";
 import mongoClient from "@/app/lib/mongodb";
 import Party from "@/app/models/Party";
+import Member from "@/app/models/Member";
 import { NextResponse } from 'next/server';
 
 // Get party
@@ -20,24 +21,43 @@ export async function PUT(req, context) {
   const params = await context.params;
   try {
     await mongoClient();
-    const { firstName, lastName, email, password, confirmPassword } = await req.json();
+    const { members } = await req.json();
 
-    if (!params || !params.id) {
-      return NextResponse.json({ error: "Party ID is required" }, { status: 400 });
+    if (!params?.id) {
+      return NextResponse.json(
+        { error: "Party ID is required" },
+        { status: 400 }
+      );
     }
 
-    const hashedPwd = await bcrypt.hash(password, 10);
-
-    const party = {
-      firstName, 
-      lastName, 
-      email, 
-      password: hashedPwd
+    if (!members || !Array.isArray(members)) {
+      return NextResponse.json(
+        { error: "Members array is required" },
+        { status: 400 }
+      );
+    }
+    // Update all members in parallel
+    try {
+      await Promise.all(
+        members.map((m) =>
+          Member.findByIdAndUpdate(
+            m._id,
+            {
+              attendingFriday: m.attendingFriday,
+              attendingCeremony: m.attendingCeremony,
+              attendingReception: m.attendingReception,
+              dietaryRestrictions: m.dietaryRestrictions || "",
+            },
+            { new: true }
+          )
+        )
+      );
+    } catch (err) {
+      console.log(err)
     }
 
-    const updatedParty = await Party.findByIdAndUpdate(params.id, party, { new: true })
-
-    return NextResponse.json({ message: "Party updated" }, { status: 200 });
+    const updatedParty = await Party.findOne({ partyId: params.id }).populate("members");
+    return NextResponse.json({ message: "Party updated", party: updatedParty, }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }

@@ -8,7 +8,7 @@ import { NextResponse } from 'next/server';
 export async function POST(req){
   try {
     await mongoClient(); 
-    const { partyId, firstName, lastName  } = await req.json();
+    const { partyId, firstName, lastName, attendingFriday, attendingCeremony, attendingReception  } = await req.json();
 
     // Find the party
     const party = await Party.findOne({ partyId });
@@ -17,7 +17,7 @@ export async function POST(req){
     }
 
     //creating new Member 
-    const newMember = await Member.create({ party: party._id, firstName, lastName }); 
+    const newMember = await Member.create({ party: party._id, firstName, lastName, attendingFriday, attendingCeremony, attendingReception }); 
   
     // pushing Member object ref to party Member array
     party.members.push(newMember._id);
