@@ -9,6 +9,7 @@ const RsvpForm = ({ params }) => {
   const { id } = useParams();
   const [members, setMembers] = useState([]);
   const [party, setParty] = useState();
+  const [changesSaved, setChangesSaved] = useState(false)
   const [loading, setLoading] = useState(true);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState(null);
@@ -31,7 +32,6 @@ const RsvpForm = ({ params }) => {
     e.preventDefault();
     setPending(false);
     setError(null)
-    console.log(members)
     // update party
     try {
       const res = await fetch(`/api/auth/party/${party.partyId}`, {
@@ -39,10 +39,13 @@ const RsvpForm = ({ params }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ members }),
       });
+      console.log(res)
       //toast.success(res.data.message);
+      setChangesSaved(true)
+      redirect()
     } catch (err) {
       console.log(err);
-      setError(err.response.data.message);
+      //setError(err.response.data.message);
       setPending(false);
     }
   }
@@ -79,8 +82,21 @@ const RsvpForm = ({ params }) => {
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return (
+    <div className="px-4 sm:px-6 lg:px-8 mt-10">
+      <p>Loading...</p>
+    </div>
+  )
 
+  if (changesSaved) {
+    return (
+      <div className="flex px-4 sm:px-6 lg:px-8 mt-10">
+        <div className="m-auto">
+          <h1 className="text-5xl">Thank you!</h1>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="px-4 sm:px-6 lg:px-8 mt-10">
       <div className="flex">
@@ -103,12 +119,10 @@ const RsvpForm = ({ params }) => {
                   <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pl-0">
                     Name
                   </th>
-                  {party?.fridayInvite ? (
+                  {party?.fridayInvite && (
                   <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
                     Friday Dinner
                   </th>
-                  ) : (
-                    <></>
                   )}
                   <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
                     Ceremony & Lunch
@@ -127,12 +141,10 @@ const RsvpForm = ({ params }) => {
                     <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">
                     {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
                     </td>
-                    {party?.fridayInvite ? (                    
+                    {party?.fridayInvite && (                    
                     <td>
                       <input type="checkbox" checked={!!member.attendingFriday} onChange={() => handleCheckboxChange(index, "attendingFriday")} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
-                    </td>) : (
-                      <></>
-                    )}
+                    </td>)}
                     <td>
                       <input type="checkbox" checked={!!member.attendingCeremony} onChange={() => handleCheckboxChange(index, "attendingCeremony")} className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
                     </td>
