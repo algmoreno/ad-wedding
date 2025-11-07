@@ -4,6 +4,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { CustomLoader, HeartLoader } from '@/components/index';
 
 const RsvpForm = ({ params }) => {
   const { id } = useParams();
@@ -42,7 +43,6 @@ const RsvpForm = ({ params }) => {
       console.log(res)
       //toast.success(res.data.message);
       setChangesSaved(true)
-      redirect()
     } catch (err) {
       console.log(err);
       //setError(err.response.data.message);
@@ -83,15 +83,18 @@ const RsvpForm = ({ params }) => {
   }
 
   if (loading) return (
-    <div className="px-4 sm:px-6 lg:px-8 mt-10">
-      <p>Loading...</p>
+    <div className="flex px-4 sm:px-6 lg:px-8 mt-10">
+      <div className="m-auto">
+        <CustomLoader/>
+      </div>
     </div>
   )
 
   if (changesSaved) {
     return (
-      <div className="flex px-4 sm:px-6 lg:px-8 mt-10">
-        <div className="m-auto">
+      <div className="flex px-4 sm:px-6 lg:px-8 mt-[200px]">
+        <div className="block m-auto">
+          <HeartLoader />
           <h1 className="text-5xl">Thank you!</h1>
         </div>
       </div>
