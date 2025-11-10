@@ -1,5 +1,6 @@
 import React from 'react'
 import Stack from './Stack'
+import { MdSwipe } from "react-icons/md";
 
 const images = [
     { id: 1, img: "/assets/ad-1.jpg" },
@@ -27,6 +28,10 @@ const Gallery = () => {
             cardsData={images}
             />
         </div>
+        <div className="flex">
+          <MdSwipe size={25} className="m-auto"/>
+        </div>
+
         <div className="h-full shadow-sm font-header drop-shadow-xl/50 rounded-sm text-center p-5">
             <p className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
