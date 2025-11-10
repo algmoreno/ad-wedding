@@ -43,14 +43,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - details page
 
 - write story for gallery page
-- add swipe indicator on gallery
+- add more pictures
 
   rsvp page
 - change 'friday dinner' to real event name
 - add friday dinner description
 
   guest page
-- attendance counter functions
 - enter all names and parties
 
 - registry
