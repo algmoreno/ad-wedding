@@ -110,9 +110,15 @@ const RsvpForm = ({ params }) => {
         </div>
         <div className="sm:flex sm:items-center">
           <div className="flex sm:flex-auto">
+            {members.length > 1 ? (
             <p className="m-auto mt-2 text-sm text-gray-700">
               Please select all events each person will be attending
             </p>
+            ) : (
+            <p className="m-auto mt-2 text-sm text-gray-700">
+              Please select all events you will be attending
+            </p>
+            )}
           </div>
   
         </div>
