@@ -17,7 +17,7 @@ const PreRsvpForm = () => {
       <div className="w-full max-w-sm space-y-10">
         <div>
           <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">
-            Enter your RSVP code or scan QR code
+            Enter your RSVP code
           </h2>
         </div>
 
