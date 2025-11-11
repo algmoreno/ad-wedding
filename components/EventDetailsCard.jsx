@@ -3,7 +3,7 @@ import Balatro from './Balatro';
 
 const EventDetailsCard = () => {
   return (
-    <div className="w-full sm:min-h-[1100px] p-5 overflow-hidden shadow-sm font-header drop-shadow-xl/50 rounded-sm border-l-12 border-double border-white">
+    <div className="w-full sm:min-h-[1100px] p-5 overflow-hidden font-header drop-shadow-sm border-l-16">
 
       { /* Shared background */}
       <div className="flex absolute inset-0">
@@ -16,7 +16,7 @@ const EventDetailsCard = () => {
 
         {/* Top row: date spans both columns */}
         <div className="flex sm:col-span-4 sm:col-start-2 justify-center items-center pt-10">
-          <h2 className="text-5xl sm:text-6xl mb-10 text-center font-extrabold text-black/90 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-5xl sm:text-6xl mb-10 text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
             Saturday, April 18, 2026
           </h2>
         </div>
@@ -26,7 +26,7 @@ const EventDetailsCard = () => {
           <h2 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
             9:15 am
           </h2>
-          <h2 className="text-4xl text-center font-extrabold sm:text-4xl mt-5 text-black text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-4xl text-center font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
             Ceremony and Lunch
           </h2>
           <h2 className="text-2xl text-center font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
@@ -42,7 +42,7 @@ const EventDetailsCard = () => {
           <h2 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
             5:30 pm
           </h2>
-          <h2 className="text-4xl font-extrabold sm:text-4xl mt-5 text-black text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-4xl font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
             Reception
           </h2>
           <h2 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">

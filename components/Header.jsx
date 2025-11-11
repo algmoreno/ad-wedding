@@ -5,7 +5,7 @@ import GradientText from './GradientText'
 
 const Header = () => {
   return (
-    <div className='font-bold'>
+    <div className='h-[600px] sm:h-[1200px] font-bold bg-7'>
         <div className='flex px-2 sm:px-6 lg:px-8 font-header justify-center p-10 text-center'>
           <a href="/">
             <GradientText 

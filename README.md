@@ -40,7 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - hotel link / group info
 - wedding email
 
-- details page
+- put travel and accommodation on event detail card
 
 - write story for gallery page
 - add more pictures
