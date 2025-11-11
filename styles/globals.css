@@ -317,6 +317,12 @@ color: inherit;
   background-size: 20%;
 }
 
+.bg-hotel {
+  background-image: url("/assets/el_conq.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bg-0 {
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;
