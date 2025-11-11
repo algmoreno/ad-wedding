@@ -3,7 +3,7 @@ import Balatro from './Balatro';
 
 const EventDetailsCard = () => {
   return (
-    <div className="w-full sm:min-h-[1100px] p-5 overflow-hidden font-header drop-shadow-sm border-l-16">
+    <div className="w-full sm:min-h-[1100px] p-5 overflow-hidden font-header drop-shadow-sm">
 
       { /* Shared background */}
       <div className="flex absolute inset-0">
@@ -16,66 +16,72 @@ const EventDetailsCard = () => {
 
         {/* Top row: date spans both columns */}
         <div className="flex sm:col-span-4 sm:col-start-2 justify-center items-center pt-10">
-          <h2 className="text-5xl sm:text-6xl mb-10 text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-3xl sm:text-6xl mb-10 text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
             Saturday, April 18, 2026
           </h2>
         </div>
 
         {/* Row 1, Column 1: Event 1 */}
-        <div className="flex flex-col col-start-1 col-end-4 justify-center items-center p-10 border-2 outline-2 outline-offset-8 backdrop-blur-[6px]">
-          <h2 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
+        <div className="flex flex-col col-start-1 col-end-4 justify-center items-center p-10 border-4 border-black  text-red-900 outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
+          <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             9:15 am
           </h2>
-          <h2 className="text-4xl text-center font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="p-10 text-3xl text-center font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
             Ceremony and Lunch
           </h2>
-          <h2 className="text-2xl text-center font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-xl text-center font-extrabold sm:text-2xl mt-5 text-shadow-lg text-shadow-white-200/30">
+            Coronado?????
+          </h2>
+          <h2 className="text-xl text-center font-extrabold sm:text-2xl mt-2 text-shadow-lg text-shadow-white-200/30">
             Hilton El Conquistador Resort
           </h2>
-          <h1 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h1 className="text-xl font-extrabold sm:text-2xl mt-2 text-shadow-lg text-shadow-white-200/30">
             Tucson, AZ
           </h1>
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-4 col-end-7 row-start-3 justify-center items-center p-10 text-center border-2 outline-2 outline-offset-8 backdrop-blur-[6px]">
-          <h2 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
+        <div className="flex flex-col col-start-4 col-end-7 row-start-3 justify-center items-center p-10 text-center border-4 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
+          <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             5:30 pm
           </h2>
-          <h2 className="text-4xl font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="p-10 text-3xl font-extrabold sm:text-4xl mt-5text-shadow-lg text-shadow-white-200/30">
             Reception
           </h2>
-          <h2 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-xl text-center font-extrabold sm:text-2xl mt-5 text-shadow-lg text-shadow-white-200/30">
+            Presidio Foyer and Ballroom
+          </h2>
+          <h2 className="text-xl font-extrabold sm:text-2xl mt-2 text-shadow-lg text-shadow-white-200/30">
             Hilton El Conquistador Resort
           </h2>
-          <h1 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h1 className="text-xl font-extrabold sm:text-2xl mt-2 text-shadow-lg text-shadow-white-200/30">
             Tucson, AZ
           </h1>
         </div>
 
-        <div className="col-start-4 col-end-5 row-start-2 border-4 bg-4">
+        <div className="flex flex-col col-start-4 col-end-5 row-start-2 border-1 bg-4 h-full">
 
         </div>
 
-        <div className="col-start-2 col-end-4 row-start-3 border-4 bg-4">
+        <div className="flex flex-col col-start-2 col-end-4 row-start-3 border-1 bg-4 h-full">
 
         </div>
 
-        <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 justify-center items-center">
-          <h2 className="text-5xl sm:text-6xl mb-10 text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
+        <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 mt-10 justify-center items-center">
+          <h2 className="text-3xl sm:text-6xl mb-10 text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
             Travel & Accommodation
           </h2>
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
         <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 text-center border-2 outline-2 outline-offset-8 backdrop-blur-[6px]">
-          <h2 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
             5:30 pm
           </h2>
-          <h2 className="text-4xl font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-3xl font-extrabold sm:text-4xl mt-5 text-red-900 text-shadow-lg text-shadow-white-200/30">
             Reception
           </h2>
-          <h2 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
             Hilton El Conquistador Resort
           </h2>
           <h1 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
