@@ -1,9 +1,9 @@
-import {SaveDateCard, BookingCard } from '@/components/index';
+import {EventDetailsCard, BookingCard } from '@/components/index';
 
 export default function Home() {
   return (
     <div className='py-8'>
-      <SaveDateCard />
+      <EventDetailsCard />
       <BookingCard />
     </div>
   );
