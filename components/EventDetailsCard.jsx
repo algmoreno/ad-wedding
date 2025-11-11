@@ -74,7 +74,7 @@ const EventDetailsCard = () => {
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 text-center backdrop-blur-[6px]">
+        <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 text-center">
           <img className="w-[180px] sm:mt-10 height-auto" src="/assets/airplane_icon.png" />
           <h2 className="text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30">
             Tucson International Airport
@@ -87,7 +87,7 @@ const EventDetailsCard = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center items-center p-10 text-center backdrop-blur-[6px]">
+        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center items-center p-10 text-center">
         <div className="bg-hotel h-[500px] w-full rounded-sm"></div>
           
           <h2 className="text-2xl font-extrabold sm:text-4xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
