@@ -164,10 +164,9 @@ color: inherit;
 .balatro-custom-1 {
   background-color: transparent;
   background-image:
-  linear-gradient(rgba(133, 56, 12, 0.4), rgba(255, 255, 255, 0.3)),
+  linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
   url("/assets/tree_pattern.png");
   backdrop-filter: invert(95px);
-  
   background-size: 800px;
   background-position: 10% 20%;
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
@@ -182,6 +181,16 @@ color: inherit;
   url("/assets/tree_pattern.png");
   backdrop-filter: invert(95px);
   background-size: 800px;
+  background-position: 10% 20%;
+}
+
+.balatro-custom-3 {
+  background-color: transparent;
+  background-image:
+  linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)),
+  url("/assets/ad-2.jpg");
+  backdrop-filter: invert(95px);
+  background-size: cover;
   background-position: 10% 20%;
 
 }
@@ -327,20 +336,22 @@ color: inherit;
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover contain;
+    background-size: cover;
+    background-position: 60% 80%;
 }
 
 .bg-1 {
     background-image: url("/assets/white_branches.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover contain;
+    background-size: cover;
 }
 
 .bg-2 {
     background-image: url("/assets/house_tree.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    filter: blur(15px); 
 }
 
 .bg-3 {
@@ -354,6 +365,7 @@ color: inherit;
     background-image: url("/assets/wall_plants.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    filter: blur(15px); 
 }
 
 .bg-5 {

@@ -1,8 +1,8 @@
 export { default as Header } from './Header';
 export { default as Toaster } from './Sonner';
 export { default as Navbar } from './Navbar';
+export { default as Landing } from './Landing';
 export { default as EventDetailsCard } from './EventDetailsCard';
-export { default as BookingCard } from './BookingCard';
 export { default as Gallery } from './Gallery';
 export { default as RsvpEntryForm } from './RsvpEntryForm';
 export { default as RsvpForm } from './RsvpForm';
