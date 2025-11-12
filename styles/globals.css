@@ -148,20 +148,6 @@ color: inherit;
 }
 
 .balatro-custom {
-    background-color: transparent;
-    background-image:
-    linear-gradient(rgba(133, 56, 12, 0.4), rgba(255, 255, 255, 0.3)),
-    url("/assets/tree_pattern.png");
-    backdrop-filter: invert(95px);
-    background-attachment: fixed;
-    background-size: 1200px;
-    background-position: -50% 20%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-}
-
-.balatro-custom-1 {
   background-color: transparent;
   background-image:
   linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
@@ -174,13 +160,55 @@ color: inherit;
   -webkit-mask-size: cover;
 }
 
+.balatro-custom {
+    background-color: transparent;
+    background-image:
+    linear-gradient(rgba(252, 252, 252, 0.4), rgba(255, 255, 255, 0.3)),
+    url("/assets/tree_pattern.png");
+    backdrop-filter: invert(95px);
+    background-attachment: fixed;
+    background-size: 1200px;
+    background-position: -50% 20%;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+}
+
+.balatro-custom-mobile {
+  background-color: transparent;
+  background-image:
+  linear-gradient(rgba(252, 252, 252, 0.4), rgba(255, 255, 255, 0.3)),
+  url("/assets/tree_pattern.png");
+  backdrop-filter: invert(95px);
+  background-attachment: fixed;
+  background-size: 500px;
+  background-position: -50% 20%;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
+.balatro-custom-1 {
+  background-color: transparent;
+  background-image:
+  linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
+  url("/assets/tree_pattern.png");
+  backdrop-filter: invert(95px);
+  background-size: cover;
+  filter: blur(15px); 
+  background-attachment: fixed;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
 .balatro-custom-2 {
   background-color: transparent;
   background-image:
   linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)),
   url("/assets/tree_pattern.png");
   backdrop-filter: invert(95px);
-  background-size: 800px;
+  background-size: 500px;
   background-position: 10% 20%;
 }
 
@@ -194,37 +222,6 @@ color: inherit;
   background-position: 10% 20%;
 
 }
-
-
-/* .balatro-custom-sm {
-    background-color: transparent;
-    background-image:
-    linear-gradient(rgba(133, 56, 12, 0.4), rgba(132, 113, 8, 0.3)),
-    url("/assets/tree_pattern.png");
-    background-color: red;
-    backdrop-filter: blur(15px);
-    background-attachment: local;
-    background-size: 100px;
-    background-position: 10% 120%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(199, 3, 3), transparent);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-}  */
-
-/* .balatro-custom {
-    background: url('/assets/rose_sketch.png') center/cover no-repeat;
-    background-attachment: local;
-    background-size: 1500px;
-    background-position: 80% 60%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(254, 254, 254), transparent);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-} */
-
-
-/* .balatro-custom {
-    background: linear-gradient(to bottom, rgb(255, 255, 255), transparent);
-} */
 
 .loader {
   width: 7em;
