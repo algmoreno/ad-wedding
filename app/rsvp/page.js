@@ -2,7 +2,7 @@ import { RsvpEntryForm } from '@/components/index';
 
 const page = () => {
   return (
-    <div className='py-8'>
+    <div className=''>
       <RsvpEntryForm />
     </div>
   )

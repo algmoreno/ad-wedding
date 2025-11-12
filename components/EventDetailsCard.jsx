@@ -8,21 +8,21 @@ const EventDetailsCard = () => {
       { /* Shared background */}
       <div className="flex absolute inset-0">
         <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
-        <div className="absolute inset-0 balatro-custom-1 pointer-events-none" />
+        <div className="absolute inset-0 balatro-custom pointer-events-none" />
       </div>
 
       {/*Event Details */}
       <div className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 w-full h-full mb-20 z-20 p-5">
 
         {/* Top row: date spans both columns */}
-        <div className="flex sm:col-span-4 sm:col-start-2 justify-center items-center">
+        <div className="flex mb-10 sm:col-span-4 sm:col-start-2 justify-center items-center">
           <h2 className="text-3xl sm:text-6xl text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
             Saturday, April 18, 2026
           </h2>
         </div>
 
         {/* Row 1, Column 1: Event 1 */}
-        <div className="flex flex-col col-start-1 col-end-4 justify-center items-center border-4 border-black text-red-900 rounded-sm outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
+        <div className="flex flex-col col-start-1 col-end-4 justify-center items-center p-10 border-4 border-black text-red-900 rounded-sm outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
           <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             9:15 am
           </h2>
@@ -30,7 +30,7 @@ const EventDetailsCard = () => {
             Ceremony and Lunch
           </h2>
           <h2 className="text-xl text-center font-extrabold sm:text-2xl mt-5 text-shadow-lg text-shadow-white-200/30">
-            Sunset Point?
+            Sunset Point
           </h2>
           <h2 className="text-xl text-center font-extrabold sm:text-2xl mt-2 text-shadow-lg text-shadow-white-200/30">
             Hilton El Conquistador Resort
@@ -59,8 +59,8 @@ const EventDetailsCard = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col col-start-4 col-end-5 row-start-2 bg-2 h-full"></div>
-        <div className="flex flex-col col-start-2 col-end-4 row-start-3 bg-2 h-full"></div>
+        {/* <div className="flex flex-col col-start-4 col-end-5 row-start-2 bg-2 h-full"></div>
+        <div className="flex flex-col col-start-2 col-end-4 row-start-3 bg-2 h-full"></div> */}
 
 
       </div>
@@ -121,7 +121,7 @@ const EventDetailsCard = () => {
         <div className="flex flex-col col-start-2 row-start-5 justify-center items-center p-10 text-center border-1">
           <img className="w-[180px] height-auto" src="/assets/airplane_icon.png" />
           <h2 className="text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30">
-            RSVP here
+            RSVP
           </h2>
         </div>
 
