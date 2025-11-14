@@ -15,8 +15,8 @@ const EventDetailsCard = () => {
       <div className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 w-full h-full mb-20 z-20 p-5">
 
         {/* Top row: date spans both columns */}
-        <div className="flex mb-10 sm:col-span-4 sm:col-start-2 justify-center items-center">
-          <h2 className="text-3xl sm:text-6xl text-center font-extrabold text-red-900 text-shadow-lg text-shadow-white-200/30">
+        <div className="flex mb-10 sm:col-span-4 sm:col-start-2 justify-end items-center">
+          <h2 className="text-2xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black underline decoration-[1px]">
             Saturday, April 18, 2026
           </h2>
         </div>
@@ -68,8 +68,8 @@ const EventDetailsCard = () => {
       {/*Travel & Accommodation Section */}
       <div className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 gap-8 w-full h-full z-20 mb-20">
 
-        <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 mt-10 justify-center items-center">
-          <h2 className="text-3xl sm:text-6xl mb-10 text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
+        <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 mt-10 justify-center">
+          <h2 className="text-2xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black ">
             Travel & Accommodation
           </h2>
         </div>
@@ -77,7 +77,7 @@ const EventDetailsCard = () => {
         {/* Row 2, Column 2: Event 2 */}
         <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 text-center">
           <img className="w-[180px] sm:mt-10 height-auto" src="/assets/airplane_icon.png" />
-          <h2 className="text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-sm text-shadow-black/30">
             Tucson International Airport
           </h2>
           <h2 className="text-2xl font-extrabold sm:text-2xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
@@ -91,7 +91,7 @@ const EventDetailsCard = () => {
         <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center items-center p-10 text-center">
         <div className="bg-hotel h-[500px] w-full rounded-sm"></div>
           
-          <h2 className="text-2xl font-extrabold sm:text-4xl mt-5 text-gray-900 text-shadow-lg text-shadow-white-200/30">
+          <h2 className="text-2xl font-extrabold sm:text-4xl mt-5 text-gray-900 text-shadow-sm text-shadow-black/30">
             Hilton El Conquistador Resort
           </h2>
           <h2 className="text-xl font-extrabold sm:text-2xl mt-5 text-shadow-lg text-shadow-white-200/30">
@@ -100,8 +100,10 @@ const EventDetailsCard = () => {
           <h1 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
             Tucson, AZ 85704
           </h1>
-          <h1 className="text-2xl font-extrabold sm:text-2xl mt-5 text-blue-600 underline decoration-1 text-shadow-lg text-shadow-white-200/30">
-          <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">Book your stay here!</a>
+          <h1 className="text-2xl font-extrabold sm:text-2xl mt-5 text-blue-700 underline decoration-1 text-shadow-lg text-shadow-white-200/30">
+          <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">
+            Book your stay
+          </a>
           </h1>
 
         </div>
@@ -111,17 +113,16 @@ const EventDetailsCard = () => {
       {/*RSVP Section */}
       <div className="bg-gray-200 p-10 relative sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-full z-20 border-y-2 border-amber-950">
 
+
+
+        {/* Row 2, Column 2: Event 2 */}
+        <div className="flex flex-col col-start-2 row-start-2 bg-envelope pb-2 justify-center items-center p-10 text-center rounded-sm">
+          <a className="text-4xl font-extrabold sm:text-4xl text-blue-700 text-shadow-lg text-shadow-white-200/30" href="/rsvp"> RSVP </a>
+        </div>
+
         <div className="flex sm:col-span-1 sm:col-start-2 row-start-4 mt-10 justify-center items-center">
           <h2 className="text-xl sm:text-2xl mb-10 text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
             We hope you can make it!
-          </h2>
-        </div>
-
-        {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-2 row-start-5 justify-center items-center p-10 text-center border-1">
-          <img className="w-[180px] height-auto" src="/assets/airplane_icon.png" />
-          <h2 className="text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30">
-            RSVP
           </h2>
         </div>
 
