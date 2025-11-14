@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const PreRsvpForm = () => {
+const RsvpEntryForm = () => {
   const router = useRouter();
   let [partyId, setPartyId] = useState("")
 
@@ -50,4 +50,4 @@ const PreRsvpForm = () => {
   )
 }
 
-export default PreRsvpForm
+export default RsvpEntryForm

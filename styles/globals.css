@@ -329,6 +329,12 @@ color: inherit;
   background-size: cover;
 }
 
+.bg-envelope {
+  background-image: url("/assets/envelope.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .bg-0 {
     background-image: url("/assets/white_flower.jpg");
     background-repeat: no-repeat;
