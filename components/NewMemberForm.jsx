@@ -71,7 +71,6 @@ const NewMemberForm = () => {
                     id="last-name"
                     value={member.lastName}
                     onChange={(e) => setMember({...member, lastName:e.target.value})}
-                    required
                     placeholder="last name"
                     aria-label="last name"
                     className="block w-full rounded-t-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:relative focus:outline-2 focus:outline-blue-600 sm:text-sm"
