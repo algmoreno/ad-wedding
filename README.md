@@ -40,7 +40,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - write story for gallery page
 - add more pictures
-
-- registry
+- add gifts to registry
 
 - mobile responsive
