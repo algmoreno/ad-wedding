@@ -32,7 +32,7 @@ const Gallery = () => {
           <MdSwipe size={25} className="m-auto"/>
         </div>
 
-        <div className="h-full shadow-sm font-header drop-shadow-xl/50 rounded-sm text-center p-5">
+        <div className="h-full border-t border-gray-400 shadow-sm font-header drop-shadow-xl/50 text-center p-5">
             <p className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Perspiciatis sunt consectetur necessitatibus expedita nulla, dolor consequatur laborum vel dolores, exercitationem, provident unde et ipsum recusandae. Nobis amet a ullam nam?
