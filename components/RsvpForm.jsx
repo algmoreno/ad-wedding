@@ -151,7 +151,7 @@ const RsvpForm = ({ params }) => {
                   {members.map((member, index) => (
                     <tr key={member._id} className="divide-x divide-gray-200 text-center">
                       <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">
-                      {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
+                      {capitalizeFirstLetter(member.firstName)} 
                       </td>
                       {party?.fridayInvite && (                    
                       <td>
