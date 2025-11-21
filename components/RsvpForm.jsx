@@ -104,11 +104,11 @@ const RsvpForm = ({ params }) => {
   }
   if (members.length > 0){
     return (
-      <div className="px-4 sm:px-6 lg:px-8 mt-10">
+      <div className="sm:px-6 lg:px-8 mt-10">
         <div className="flex">
           <h1 className="m-auto">RSVP</h1>
         </div>
-        <div className="sm:flex sm:items-center">
+        <div className="sm:flex sm:items-center p-4">
           <div className="flex sm:flex-auto">
             {members.length > 1 ? (
             <p className="m-auto mt-2 text-sm text-gray-700">
@@ -122,12 +122,12 @@ const RsvpForm = ({ params }) => {
           </div>
   
         </div>
-        <div className="mt-8 flow-root  border-1 p-2">
+        <div className="mt-8 flow-root p-4">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-              <table className="min-w-full divide-y divide-gray-300">
+              <table className="min-w-full">
                 <thead>
-                  <tr className="divide-x divide-gray-200 p-2">
+                  <tr className="divide-x divide-gray-300 p-2">
                     <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pl-0">
                       Name
                     </th>
@@ -147,7 +147,7 @@ const RsvpForm = ({ params }) => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 bg-white p-2">
+                <tbody className="divide-y divide-gray-300 bg-white p-2">
                   {members.map((member, index) => (
                     <tr key={member._id} className="divide-x divide-gray-200 text-center">
                       <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">
@@ -180,12 +180,13 @@ const RsvpForm = ({ params }) => {
                   ))}
                 </tbody>
               </table>
-              <div className="flex">
-                <button onClick={handleSave} className="border-1 bg-blue-500 p-2 text-white mt-5 ml-auto rounded-md">Save</button>
-              </div>
+
             </div>
           </div>
                   
+        </div>
+        <div className="flex">
+          <button onClick={handleSave} className="border-1 bg-blue-500 p-2 w-full sm:w-[100px] text-white mt-5 ml-auto rounded-md">Save</button>
         </div>
         
       </div>

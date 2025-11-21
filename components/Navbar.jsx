@@ -5,10 +5,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 const navigation = [
-  { name: 'Details', href: '/details', current: false },
-  { name: 'Travel & Accommodations', href: '/#booking', current: false },
+  { name: 'Event Details', href: '#details', current: false },
+  { name: 'Travel & Accommodations', href: '#t&a', current: false },
     { name: 'Gallery', href: '/gallery', current: false },
     { name: 'RSVP', href: '/rsvp', current: false },
+    { name: 'Registry', href: 'https://registry.theknot.com/alan-moreno-doli-patel-april-2026-az/75265407', current: false },
   ]
   
   function classNames(...classes) {
@@ -18,7 +19,7 @@ const navigation = [
 const Navbar = () => {
   return (
     <Disclosure as="nav" className="relative backgdrop-blur-lg">
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-primary text-black">
+    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-primary text-black text-shadow-white text-shadow-lg">
       <div className="relative flex h-10 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* Mobile menu button*/}
@@ -36,6 +37,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
+                  target={item.name === "Registry" ? "_blank" : "_self"}
                   aria-current={item.current ? 'page' : undefined}
                   className={'text-white'}
                 >
