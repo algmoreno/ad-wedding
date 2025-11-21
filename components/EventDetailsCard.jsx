@@ -1,9 +1,6 @@
 import React from 'react'
 import Balatro from './Balatro';
-<<<<<<< HEAD
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
-=======
->>>>>>> d9a041a920575a13d7757285359fa44480c090b3
 
 const EventDetailsCard = () => {
   return (
@@ -125,46 +122,21 @@ const EventDetailsCard = () => {
       </div>
 
       {/*RSVP Section */}
-<<<<<<< HEAD
-      <div className="bg-engagement-3 rounded-sm p-10 text-white relative sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-full z-20 border-y-2 border-amber-950">
-
-
-        <div className="backdrop-blur-md">
-        <div className="flex flex-col col-start-2 row-start-2  pb-2 justify-center items-center p-10 text-center rounded-sm">
-          <a className="block text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30" href="/rsvp"> 
-            RSVP 
-            <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={30}/>
-          </a>
-          
-
-        </div>
-
-        <div className="flex sm:col-span-1 sm:col-start-2 row-start-4 mt-10 justify-center items-center">
-          <h2 className="text-xl sm:text-2xl mb-10 text-white text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
-            We hope you can make it!
-          </h2>
-        </div>
-        </div>
-        {/* Row 2, Column 2: Event 2 */}
-
-=======
-      <div className="bg-gray-200 p-10 relative sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-full z-20 border-y-2 border-amber-950">
-
-
+      <div className="flex bg-engagement-3 rounded-sm p-10 text-white relative sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-2 row-start-2 bg-envelope pb-2 justify-center items-center p-10 text-center rounded-sm">
-          <a className="text-4xl font-extrabold sm:text-4xl text-blue-700 text-shadow-lg text-shadow-white-200/30" href="/rsvp"> RSVP </a>
+        <div className="min-h-[250px] m-auto backdrop-blur-sm bg-amber-500/20 rounded-md">
+          <div className="flex flex-col col-start-2 row-start-2  pb-2 justify-center items-center p-10 text-center rounded-sm">
+            <a className="block text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30" href="/rsvp"> 
+              RSVP 
+              <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={30}/>
+            </a>
+            <h2 className="text-xl sm:text-2xl mt-5 text-white text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
+              We hope you can make it!
+            </h2>
+          </div>
         </div>
-
-        <div className="flex sm:col-span-1 sm:col-start-2 row-start-4 mt-10 justify-center items-center">
-          <h2 className="text-xl sm:text-2xl mb-10 text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
-            We hope you can make it!
-          </h2>
-        </div>
->>>>>>> d9a041a920575a13d7757285359fa44480c090b3
-
-
+      
       </div>
     </div>
 

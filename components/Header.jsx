@@ -16,14 +16,14 @@ const Header = () => {
             >
                 
             </GradientText>
-            <h1 className="text-[60px] md:text-[50px] text-white">
+            <h1 className="text-[60px] md:text-[50px] text-white text-shadow-lg text-shadow-white/30">
               Doli & Alan
             </h1>
             
           </a>
-          <img className="max-md:hidden w-[100px] h-[100px]" src="/assets/favicon.png" />
+          {/* <img className="max-md:hidden w-[100px] h-[100px]" src="/assets/favicon.png" /> */}
         </div>
-        <img className="sm:hidden m-auto w-[100px] h-[100px] sm:w-[100px] sm:h-[100px]" src="/assets/favicon.png" />
+        {/* <img className="sm:hidden m-auto w-[100px] h-[100px] sm:w-[100px] sm:h-[100px]" src="/assets/favicon.png" /> */}
         <Navbar />
     </div>
   )
