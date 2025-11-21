@@ -36,22 +36,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## TODO
-- add picture to home page
-- hotel link / group info
-- wedding email
-
-- put travel and accommodation on event detail card
+- home page picture
 
 - write story for gallery page
 - add more pictures
-
-  rsvp page
-- change 'friday dinner' to real event name
-- add friday dinner description
-
-  guest page
-- enter all names and parties
-
-- registry
+- add gifts to registry
 
 - mobile responsive

@@ -12,7 +12,7 @@ const EventDetailsCard = () => {
       </div>
 
       {/*Event Details */}
-      <div className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 w-full h-full mb-20 z-20 p-5">
+      <div id="details" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 w-full h-full mb-20 z-20 p-5">
 
         {/* Top row: date spans both columns */}
         <div className="flex mb-10 sm:col-span-4 sm:col-start-2 justify-end items-center">
@@ -66,7 +66,7 @@ const EventDetailsCard = () => {
       </div>
 
       {/*Travel & Accommodation Section */}
-      <div className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 gap-8 w-full h-full z-20 mb-20">
+      <div id="t&a" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 gap-8 w-full h-full z-20 mb-20">
 
         <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 mt-10 justify-center">
           <h2 className="text-2xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black ">
@@ -100,13 +100,23 @@ const EventDetailsCard = () => {
           <h1 className="text-2xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
             Tucson, AZ 85704
           </h1>
-          <h1 className="text-2xl font-extrabold sm:text-2xl mt-5 text-blue-700 underline decoration-1 text-shadow-lg text-shadow-white-200/30">
-          <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">
-            Book your stay
-          </a>
+          <h1 className="font-primary text-2xl font-extrabold sm:text-2xl mt-5 text-blue-600 underline decoration-1 text-shadow-lg text-shadow-white-200/30">
+          <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">Book your stay</a>
           </h1>
 
         </div>
+
+      </div>
+
+      {/*Travel & Accommodation Section */}
+      <div id="t&a" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 gap-8 w-full h-full z-20 mb-20">
+
+        <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 mt-10 justify-center items-center">
+          <h2 className="font-primary text-xl sm:text-xl mb-10 text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
+            For any questions contact: admatel.wedding@gmail.com
+          </h2>
+        </div>
+
 
       </div>
 
