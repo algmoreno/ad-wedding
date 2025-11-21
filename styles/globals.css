@@ -427,3 +427,70 @@ color: inherit;
   background-attachment: fixed;
   background-size: cover;
 }
+
+.bg-engagement-1 {
+  background-image: url("/assets/ADP_1580.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-engagement-2 {
+  background-image: url("/assets/ADP_1614.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-engagement-3 {
+  background-image: url("/assets/ADP_1616.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-engagement-4 {
+  background-image: url("/assets/ADP_1626.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-engagement-5 {
+  background-image: url("/assets/ADP_1631.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-engagement-6 {
+  background-image: url("/assets/ADP_1830.jpg");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: contain;
+  background-position: 0px -200px;
+}
+
+.bg-engagement-7 {
+  background-image: url("/assets/ADP_1855.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0px -200px;
+}
+
+.bg-engagement-8 {
+  background-image: url("/assets/ADP_1857.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0px -400px;
+}
+
+.bg-engagement-9 {
+  background-image: url("/assets/ADP_1858.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0px -400px;
+}

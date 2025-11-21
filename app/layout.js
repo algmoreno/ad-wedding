@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head >
-      <body className="bg-primary font-decorative">
+      <body className="bg-engagement-7 font-decorative">
         <header >
         <Header />
         </header>
