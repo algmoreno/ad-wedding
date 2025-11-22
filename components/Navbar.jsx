@@ -23,14 +23,14 @@ const Navbar = () => {
       <div className="relative flex h-10 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* Mobile menu button*/}
-          <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-gray-500">
+          <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-gray-500">
             <span className="absolute -inset-0.5" />
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
             <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
           </DisclosureButton>
         </div>
-        <div className="flex flex-1 mx-auto items-center justify-center sm:items-stretch sm:justify-start">
+        <div className="flex flex-1 mx-auto items-center justify-center text-white sm:items-stretch sm:justify-start">
           <div className="hidden mx-auto  sm:block">
             <div className="flex space-x-[150px]">
               {navigation.map((item) => (

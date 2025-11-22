@@ -354,7 +354,6 @@ color: inherit;
     background-image: url("/assets/house_tree.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: blur(15px); 
 }
 
 .bg-3 {
@@ -474,8 +473,8 @@ color: inherit;
 .bg-engagement-7 {
   background-image: url("/assets/ADP_1855.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-attachment: local;
+  background-size: contain;
   background-position: 0px -300px;
 }
 
@@ -494,3 +493,32 @@ color: inherit;
   background-size: cover;
   background-position: 0px -400px;
 } */
+
+
+@media (max-width: 640px) {
+  .balatro-custom {
+    background-size: cover;
+    background-position: center top; /* no cutoff on phones */
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-engagement-7 {
+    background-size: contain;
+    background-position: center top; /* no cutoff on phones */
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-engagement-3 {
+    background-size: cover;
+    background-position: center top; /* no cutoff on phones */
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-hotel {
+    background-size: cover;
+    background-position: center top; /* no cutoff on phones */
+  }
+}
