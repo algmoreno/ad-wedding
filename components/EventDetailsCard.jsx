@@ -133,7 +133,7 @@ const EventDetailsCard = () => {
   </div>
 
   {/* Contact text fixed to bottom center */}
-  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-full flex justify-center backdrop-blur-sm">
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white w-full flex justify-center">
     <h2 className="font-primary text-black text-xl sm:text-2xl text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
       For any questions contact: admatel.wedding@gmail.com
     </h2>
