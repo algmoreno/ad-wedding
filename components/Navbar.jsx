@@ -18,7 +18,7 @@ const navigation = [
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="relative backgdrop-blur-lg">
+    <Disclosure as="nav" className="relative z-30 backgdrop-blur-lg">
     <div className="mx-auto max-w-7xl px-2 sm:px-2 md:px-10 lg:px-20 font-primary text-xl text-white">
       <div className="relative flex h-10 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
       </div>
     </div>
 
-    <DisclosurePanel className="sm:hidden">
+    <DisclosurePanel className="sm:hidden z-40">
       <div className="space-y-1 px-2 pt-2 pb-3 bg-primary text-black text-shadow-sm text-shadow-black/40">
         {navigation.map((item) => (
           <DisclosureButton
