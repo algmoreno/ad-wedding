@@ -520,14 +520,16 @@ color: inherit;
 @media (max-width: 640px) {
   .bg-engagement-7 {
     background-size: cover;
-    background-position: center top; /* no cutoff on phones */
+    background-position: center;
+    background-attachment: scroll;
   }
 }
 
 @media (max-width: 640px) {
   .bg-engagement-3 {
     background-size: cover;
-    background-position: center top; 
+    background-position: center; 
+    background-attachment: scroll;
   }
 }
 
