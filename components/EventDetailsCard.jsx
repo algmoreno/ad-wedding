@@ -120,16 +120,18 @@ const EventDetailsCard = () => {
       </div> */}
 
       {/*RSVP and Contact Section */}
-      <div className="relative bg-engagement-3 rounded-sm p-10 text-white sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
+      <div className="relative bg-engagement-3 rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
 
         {/* RSVP Box */}
-        <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto backdrop-blur-md rounded-md">
+        <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto rounded-md">
           <div className="pb-2 justify-center items-center p-10 text-center rounded-sm">
-            <a className="block text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30" href="/rsvp"> 
-              RSVP 
-              <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={30}/>
+            <a className="block backdrop-blur-[2px] rounded-sm" href="/rsvp"> 
+              <h1 className="text-4xl font-extrabold sm:text-6xl text-shadow-lg text-shadow-black/60 text-orange-300">
+                RSVP
+              </h1>
+              <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={50}/>
             </a>
-            <h2 className="text-xl sm:text-2xl mt-5 text-white text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
+            <h2 className="text-4xl sm:text-6xl mt-20 text-center text-orange-300 font-extrabold text-shadow-lg text-shadow-black/30 backdrop-blur-[2px] rounded-sm">
               We hope you can make it!
             </h2>
           </div>
