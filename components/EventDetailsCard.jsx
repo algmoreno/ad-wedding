@@ -16,14 +16,17 @@ const EventDetailsCard = () => {
       <div id="details" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-2 gap-10 w-full h-full mt-20 z-20 p-5">
 
         {/* Top row: date spans both columns */}
-        <div className="flex mb-10 col-start-4 col-end-6 justify-end items-center">
-          <h2 className="text-2xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black">
-            Saturday, April 18, 2026
-          </h2>
+        <div className="flex col-start-4 col-end-7 mb-5 justify-end items-center">
+          <div className="flex w-full h-full backdrop-blur-[2px] items-center align-middle justify-center">
+            <h2 className="m-auto text-2xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black">
+              Saturday, April 18, 2026
+            </h2>
+          </div>
+
         </div>
 
         {/* Row 1, Column 1: Event 1 */}
-        <div className="flex flex-col col-start-1 col-end-4 row-start-1 justify-center items-center p-10 border-4 border-black text-red-900 rounded-sm outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
+        <div className="bg-5 flex flex-col col-start-1 col-end-4 row-start-1 justify-center items-center p-10 border-4 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
           <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             9:15 am
           </h2>
@@ -42,7 +45,7 @@ const EventDetailsCard = () => {
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-4 col-end-7 row-start-2 justify-center items-center p-10 text-center border-4 border-black text-red-900 rounded-sm outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
+        <div className="bg-5 flex flex-col col-start-4 col-end-7 row-start-2 justify-center items-center p-10 text-center border-4 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
           <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             5:30 pm
           </h2>
@@ -119,27 +122,27 @@ const EventDetailsCard = () => {
       {/*RSVP and Contact Section */}
       <div className="relative bg-engagement-3 rounded-sm p-10 text-white sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
 
-  {/* RSVP Box */}
-  <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto backdrop-blur-md rounded-md">
-    <div className="pb-2 justify-center items-center p-10 text-center rounded-sm">
-      <a className="block text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30" href="/rsvp"> 
-        RSVP 
-        <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={30}/>
-      </a>
-      <h2 className="text-xl sm:text-2xl mt-5 text-white text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
-        We hope you can make it!
-      </h2>
-    </div>
-  </div>
+        {/* RSVP Box */}
+        <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto backdrop-blur-md rounded-md">
+          <div className="pb-2 justify-center items-center p-10 text-center rounded-sm">
+            <a className="block text-4xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-white-200/30" href="/rsvp"> 
+              RSVP 
+              <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={30}/>
+            </a>
+            <h2 className="text-xl sm:text-2xl mt-5 text-white text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
+              We hope you can make it!
+            </h2>
+          </div>
+        </div>
 
-  {/* Contact text fixed to bottom center */}
-  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white w-full flex justify-center">
-    <h2 className="font-primary text-black text-xl sm:text-2xl text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
-      For any questions contact: admatel.wedding@gmail.com
-    </h2>
-  </div>
+        {/* Contact text fixed to bottom center */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white w-full flex justify-center">
+          <h2 className="font-primary text-black text-xl sm:text-2xl text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
+            For any questions contact: admatel.wedding@gmail.com
+          </h2>
+        </div>
 
-</div>
+      </div>
 
     </div>
 

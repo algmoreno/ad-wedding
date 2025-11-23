@@ -18,21 +18,21 @@ const images = [
 
 const Gallery = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 max-w-2xl h-auto m-auto overflow-hidden font-header ">
+    <div className="sm:mt-20 grid grid-cols-1 gap-4 max-w-2xl py-10 h-auto m-auto overflow-hidden font-header ">
         <div className="flex w-full justify-center items-center">
-            <Stack
-            randomRotation={false}
-            sensitivity={180}
-            sendToBackOnClick={false}
-            cardDimensions={{ width: 300, height: 400 }}
-            cardsData={images}
-            />
+          <Stack
+          randomRotation={false}
+          sensitivity={180}
+          sendToBackOnClick={false}
+          cardDimensions={{ width: 300, height: 400 }}
+          cardsData={images}
+          />
         </div>
         <div className="flex">
           <MdSwipe size={25} className="m-auto"/>
         </div>
 
-        <div className="h-full border-t border-gray-400 shadow-sm font-header drop-shadow-xl/50 text-center p-5">
+        <div className="h-full bg-white border-t border-gray-400 shadow-sm font-header drop-shadow-xl/50 text-center p-5">
           <h1>
             Our Love Story
           </h1>
@@ -74,8 +74,8 @@ const Gallery = () => {
           <p className="mt-5">
             And she said YES.
           </p>
-          <p>
-            The rest of the story is to be written….
+          <p className="mt-5">
+            The rest of the story has yet to be written….
           </p>             
         </div>
 

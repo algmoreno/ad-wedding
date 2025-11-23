@@ -1,4 +1,5 @@
 export { default as Header } from './Header';
+export { default as HeaderLanding } from './HeaderLanding';
 export { default as Toaster } from './Sonner';
 export { default as Navbar } from './Navbar';
 export { default as Landing } from './Landing';

@@ -1,9 +1,10 @@
-import { RsvpForm } from '@/components/index';
+import { RsvpForm, Header } from '@/components/index';
 
 const page = () => {
 
   return (
-    <div className='py-8'>
+    <div className='bg-primary'>
+      <Header />
       <RsvpForm/>
     </div>
   )

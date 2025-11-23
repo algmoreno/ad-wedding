@@ -1,8 +1,9 @@
-import { Gallery } from '@/components/index';
+import { Gallery, Header } from '@/components/index';
 
 const page = () => {
   return (
-    <div className='py-8'>
+    <div className='bg-primary'>
+      <Header />
       <Gallery />
     </div>
   )

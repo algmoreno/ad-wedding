@@ -367,13 +367,13 @@ color: inherit;
     background-image: url("/assets/wall_plants.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: blur(15px); 
+    background-position: 15% 25%;
 }
 
 .bg-5 {
     background-image: url("/assets/card_texture.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: local;
 }
 
 .bg-6 {
@@ -474,8 +474,15 @@ color: inherit;
   background-image: url("/assets/ADP_1855.JPG");
   background-repeat: no-repeat;
   background-attachment: local;
-  background-size: contain;
+  background-size: cover;
   background-position: 0px -300px;
+}
+
+.bg-engagement-7-1 {
+  background-image: url("/assets/ADP_1855.JPG");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
 }
 
 /* .bg-engagement-8 {
@@ -494,6 +501,14 @@ color: inherit;
   background-position: 0px -400px;
 } */
 
+@media (max-width: 640px) {
+  .card {
+    margin: auto;
+    border-radius: 0px;
+    border: none;
+    overflow: hidden;
+}
+}
 
 @media (max-width: 640px) {
   .balatro-custom {
@@ -504,7 +519,7 @@ color: inherit;
 
 @media (max-width: 640px) {
   .bg-engagement-7 {
-    background-size: contain;
+    background-size: cover;
     background-position: center top; /* no cutoff on phones */
   }
 }
