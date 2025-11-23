@@ -37,7 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## TODO
 
-- add more pictures to gallery
+- add pictures to gallery
 - add gifts to registry
-
 - mobile responsive

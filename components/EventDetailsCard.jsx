@@ -7,7 +7,7 @@ const EventDetailsCard = () => {
     <div className="w-full sm:min-h-[1100px] overflow-hidden font-header drop-shadow-sm">
 
       { /* Shared background */}
-      <div className="flex absolute inset-0">
+      <div className="flex absolute inset-0 -z-10">
         <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
         <div className="absolute inset-0 balatro-custom pointer-events-none" />
       </div>

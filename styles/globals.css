@@ -528,7 +528,7 @@ color: inherit;
 @media (max-width: 640px) {
   .bg-engagement-3 {
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-attachment: scroll;
   }
 }
