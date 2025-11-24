@@ -37,6 +37,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## TODO
 
-- add pictures to gallery
+- Remove "Create Next App" google entry title
+
+- edit gallery story (fist pump)
+- convert and add new pictures to gallery
+
+- full mobile responsive
+- medium-large screens navbar crunch
+- mobile reposition header image
+- large screen resposition header image
+- navbar mobile menu different background or bigger text
+- font/color change on "4.18.2026" and rsvp section of event details
+
 - add gifts to registry
-- mobile responsive
