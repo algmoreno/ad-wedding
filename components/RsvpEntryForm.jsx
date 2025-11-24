@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const PreRsvpForm = () => {
+const RsvpEntryForm = () => {
   const router = useRouter();
   let [partyId, setPartyId] = useState("")
 
@@ -13,8 +13,8 @@ const PreRsvpForm = () => {
   };
 
   return (
-    <div className="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
-      <div className="w-full max-w-sm space-y-10">
+    <div className="flex h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
+      <div className="w-full max-w-sm space-y-10 sm:border-1 p-5">
         <div>
           <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">
             Enter your RSVP code
@@ -50,4 +50,4 @@ const PreRsvpForm = () => {
   )
 }
 
-export default PreRsvpForm
+export default RsvpEntryForm

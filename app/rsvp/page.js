@@ -1,8 +1,9 @@
-import { RsvpEntryForm } from '@/components/index';
+import { RsvpEntryForm, Header } from '@/components/index';
 
 const page = () => {
   return (
-    <div className=''>
+    <div className='bg-primary'>
+      <Header />
       <RsvpEntryForm />
     </div>
   )

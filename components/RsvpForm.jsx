@@ -104,14 +104,14 @@ const RsvpForm = ({ params }) => {
   }
   if (members.length > 0){
     return (
-      <div className="sm:px-6 lg:px-8 mt-10">
+      <div className="sm:px-6 lg:px-8 sm:py-10 mt-20">
         <div className="flex">
-          <h1 className="m-auto">RSVP</h1>
+          <h1 className="m-auto text-2xl text-shadow-sm text-shadow-black/40">RSVP</h1>
         </div>
         <div className="sm:flex sm:items-center p-4">
           <div className="flex sm:flex-auto">
             {members.length > 1 ? (
-            <p className="m-auto mt-2 text-sm text-gray-700">
+            <p className="m-auto mt-2 text-sm text-red-900/50 text-shadow-sm text-shadow-black/30">
               Please select all events each person will be attending
             </p>
             ) : (
@@ -151,7 +151,7 @@ const RsvpForm = ({ params }) => {
                   {members.map((member, index) => (
                     <tr key={member._id} className="divide-x divide-gray-200 text-center">
                       <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">
-                      {capitalizeFirstLetter(member.firstName)} {capitalizeFirstLetter(member.lastName)}
+                      {capitalizeFirstLetter(member.firstName)} 
                       </td>
                       {party?.fridayInvite && (                    
                       <td>
