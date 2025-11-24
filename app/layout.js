@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 
 export const metadata = {
   title: "D+A",
-  description: "",
+  description: "Custom furniture, design, and more.",
 };
 
 export default function RootLayout({ children }) {
