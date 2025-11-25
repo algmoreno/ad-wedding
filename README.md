@@ -49,6 +49,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - navbar mobile menu different background or bigger text
 - font/color change on "4.18.2026" and rsvp section of event details
 
-- guest page filtering (by yes/no, yes to certain events)
+- guest page filtering (by yes/no, view everyone )
 
 - add gifts to registry
