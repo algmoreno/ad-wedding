@@ -126,12 +126,12 @@ const EventDetailsCard = () => {
         <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto rounded-md">
           <div className="pb-2 justify-center items-center p-10 text-center rounded-sm">
             <a className="block backdrop-blur-[2px] rounded-sm" href="/rsvp"> 
-              <h1 className="text-4xl font-extrabold sm:text-6xl text-shadow-lg text-shadow-black/60 text-orange-300">
+              <h1 className="text-4xl font-extrabold sm:text-6xl text-shadow-lg text-shadow-black/60 text-orange-300/90">
                 RSVP
               </h1>
               <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={50}/>
             </a>
-            <h2 className="text-4xl sm:text-6xl mt-20 text-center text-orange-300 font-extrabold text-shadow-lg text-shadow-black/30 backdrop-blur-[2px] rounded-sm">
+            <h2 className="text-4xl sm:text-6xl mt-20 text-center text-orange-300/90 font-extrabold text-shadow-lg text-shadow-black/30 backdrop-blur-[2px] rounded-sm">
               We hope you can make it!
             </h2>
           </div>

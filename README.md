@@ -45,9 +45,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - full mobile responsive
 - medium-large screens navbar crunch
 - mobile reposition header image
-- large screen resposition header image
-- navbar mobile menu different background or bigger text
-- font/color change on "4.18.2026" and rsvp section of event details
+- large screen resposition header image / check on laptop
 
 - guest page filtering (by yes/no, view everyone )
 
