@@ -147,81 +147,7 @@ color: inherit;
     height: 100%;
 }
 
-.balatro-custom {
-  background-color: transparent;
-  background-image:
-  linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
-  url("/assets/tree_pattern.png");
-  backdrop-filter: invert(95px);
-  background-size: 800px;
-  background-position: 10% 20%;
-  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-}
 
-.balatro-custom {
-    background-color: transparent;
-    background-image:
-    linear-gradient(rgba(252, 252, 252, 0.4), rgba(255, 255, 255, 0.3)),
-    url("/assets/tree_pattern.png");
-    backdrop-filter: invert(95px);
-    background-attachment: fixed;
-    background-size: 1200px;
-    background-position: -50% 20%;
-    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-}
-
-.balatro-custom-mobile {
-  background-color: transparent;
-  background-image:
-  linear-gradient(rgba(252, 252, 252, 0.4), rgba(255, 255, 255, 0.3)),
-  url("/assets/tree_pattern.png");
-  backdrop-filter: invert(95px);
-  background-attachment: fixed;
-  background-size: 500px;
-  background-position: -50% 20%;
-  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-}
-
-.balatro-custom-1 {
-  background-color: transparent;
-  background-image:
-  linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
-  url("/assets/tree_pattern.png");
-  backdrop-filter: invert(95px);
-  background-size: cover;
-  filter: blur(15px); 
-  background-attachment: fixed;
-  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-}
-
-.balatro-custom-2 {
-  background-color: transparent;
-  background-image:
-  linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)),
-  url("/assets/tree_pattern.png");
-  backdrop-filter: invert(95px);
-  background-size: 500px;
-  background-position: 10% 20%;
-}
-
-.balatro-custom-3 {
-  background-color: transparent;
-  background-image:
-  linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)),
-  url("/assets/ad-2.jpg");
-  backdrop-filter: invert(95px);
-  background-size: cover;
-  background-position: 10% 20%;
-
-}
 
 .loader {
   width: 7em;
@@ -305,19 +231,23 @@ color: inherit;
     object-fit: cover;
 }
 
+/*--------------------*/
+/* BACKGROUNDS */
+/*--------------------*/
+
 .bg-primary {
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
 }
 
 .bg-primary-2 {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
+background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
 }
 
 .bg-gray-gradient {
-    background:
-    linear-gradient(217deg, rgba(121, 121, 121, 0.8), transparent 70.71%),
-    linear-gradient(127deg, rgba(78, 78, 78, 0.8), transparent 70.71%),
-    linear-gradient(336deg, rgba(59, 59, 59, 0.8), transparent 70.71%);
+  background:
+  linear-gradient(217deg, rgba(121, 121, 121, 0.8), transparent 70.71%),
+  linear-gradient(127deg, rgba(78, 78, 78, 0.8), transparent 70.71%),
+  linear-gradient(336deg, rgba(59, 59, 59, 0.8), transparent 70.71%);
 }
 
 .bg-favicon {
@@ -328,16 +258,45 @@ color: inherit;
 }
 
 .bg-hotel {
-  background-image: url("/assets/el_conq.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+background-image: url("/assets/el_conq.jpg");
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .bg-envelope {
-  background-image: url("/assets/envelope.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+background-image: url("/assets/envelope.jpg");
+background-repeat: no-repeat;
+background-size: contain;
 }
+
+.balatro-custom {
+  background-color: transparent;
+  background-image:
+  linear-gradient(rgba(252, 252, 252, 0.4), rgba(255, 255, 255, 0.3)),
+  url("/assets/tree_pattern.png");
+  backdrop-filter: invert(95px);
+  background-attachment: fixed;
+  background-size: 1200px;
+  background-position: -50% 20%;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
+.balatro-custom-1 {
+background-color: transparent;
+background-image:
+linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
+url("/assets/tree_pattern.png");
+backdrop-filter: invert(95px);
+background-size: cover;
+filter: blur(15px); 
+background-attachment: fixed;
+-webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-size: cover;
+}
+
 
 .bg-0 {
     background-image: url("/assets/white_flower.jpg");
@@ -431,7 +390,22 @@ color: inherit;
   background-size: cover;
 }
 
-.bg-engagement-3 {
+.bg-engagement-header {
+  background-image: url("/assets/ADP_1855.JPG");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: 100%;
+  background-position: 0px -400px;
+}
+
+.bg-engagement-header-1 {
+  background-image: url("/assets/ADP_1855.JPG");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+}
+
+.bg-engagement-footer {
   background-image: url("/assets/ADP_1616.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -440,20 +414,9 @@ color: inherit;
 
 
 
-.bg-engagement-7 {
-  background-image: url("/assets/ADP_1855.JPG");
-  background-repeat: no-repeat;
-  background-attachment: local;
-  background-size: 100%;
-  background-position: 0px -400px;
-}
-
-.bg-engagement-7-1 {
-  background-image: url("/assets/ADP_1855.JPG");
-  background-repeat: no-repeat;
-  background-attachment: local;
-  background-size: cover;
-}
+/*--------------------*/
+/* MOBILE */
+/*--------------------*/
 
 @media (max-width: 640px) {
   .card {
@@ -472,7 +435,7 @@ color: inherit;
 }
 
 @media (max-width: 640px) {
-  .bg-engagement-7 {
+  .bg-engagement-header {
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -480,7 +443,15 @@ color: inherit;
 }
 
 @media (max-width: 640px) {
-  .bg-engagement-3 {
+  .bg-engagement-header-1 {
+    background-size: 600%;
+    background-position: center 1%;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-engagement-footer {
     background-size: cover;
     background-position: center;
     background-attachment: scroll;

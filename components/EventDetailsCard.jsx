@@ -120,7 +120,7 @@ const EventDetailsCard = () => {
       </div> */}
 
       {/*RSVP and Contact Section */}
-      <div className="relative bg-engagement-3 rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
+      <div className="relative bg-engagement-footer rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
 
         {/* RSVP Box */}
         <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto rounded-md">
