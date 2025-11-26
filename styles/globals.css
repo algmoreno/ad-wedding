@@ -309,6 +309,10 @@ color: inherit;
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
 }
 
+.bg-primary-2 {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(177, 163, 133, 0.5));
+}
+
 .bg-gray-gradient {
     background:
     linear-gradient(217deg, rgba(121, 121, 121, 0.8), transparent 70.71%),
@@ -475,7 +479,7 @@ color: inherit;
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: cover;
-  background-position: 0px -300px;
+  background-position: 0px -450px;
 }
 
 .bg-engagement-7-1 {

@@ -3,16 +3,24 @@ import Stack from './Stack'
 import { MdSwipe } from "react-icons/md";
 
 const images = [
-    { id: 1, img: "/assets/ad-1.jpg" },
-    { id: 2, img: "/assets/ad-2.jpg" },
-    { id: 3, img: "/assets/ad-3.jpg" },
-    { id: 4, img: "/assets/ad-4.jpg" },
-    { id: 5, img: "/assets/ad-5.jpg" },
-    { id: 6, img: "/assets/ad-6.jpg" },
-    // { id: 7, img: "/assets/ad-7.heic" },
-    { id: 8, img: "/assets/ad-8.jpg" },
-    { id: 9, img: "/assets/ad-9.jpg" },
-    // { id: 10, img: "/assets/ad-10.jpg" },
+  { id: 18, img: "/assets/ad-18.jpg" },
+  { id: 17, img: "/assets/ad-17.jpg" },
+  { id: 16, img: "/assets/ad-16.jpg" },
+  { id: 15, img: "/assets/ad-15.jpg" },
+  { id: 14, img: "/assets/ad-14.jpg" },
+  { id: 12, img: "/assets/ad-12.jpg" },
+  { id: 11, img: "/assets/ad-11.jpg" },
+  { id: 10, img: "/assets/ad-10.jpg" },
+  { id: 1, img: "/assets/ad-9.jpg" },
+  { id: 2, img: "/assets/ad-8.jpg" },
+  { id: 3, img: "/assets/ad-3.jpg" },
+  { id: 4, img: "/assets/ad-4.jpg" },
+  { id: 13, img: "/assets/ad-13.jpg" },
+  { id: 5, img: "/assets/ad-5.jpg" },
+  { id: 6, img: "/assets/ad-6.jpg" },
+  { id: 7, img: "/assets/ad-7.jpg" },
+  { id: 8, img: "/assets/ad-2.jpg" },
+  { id: 9, img: "/assets/ad-1.jpg" },
   ];
 
 
@@ -33,10 +41,10 @@ const Gallery = () => {
         </div>
 
         <div className="h-full bg-white border-t border-gray-400 shadow-sm font-header drop-shadow-xl/50 text-center p-5">
-          <h1>
+          <h1 className="text-2xl">
             Our Love Story
           </h1>
-          <p>
+          <p className="mt-5">
             It was the fall of 2022 on the second day of the Dusk music festival. 
             The night was colder than ever but hearts were to become warm with what was destined for that night. 
             Alan casually scanned the crowd and saw her-Doli-standing in line with her friends, 
@@ -50,7 +58,7 @@ const Gallery = () => {
           <p className="mt-5">
             They exchanged a few messages the next day. Alan wasn’t sure if she felt the way he did…yet. 
             Then, one week later, his phone lit up—it was her. The excitement he felt in that moment was palpable. 
-            A big smile overtook his face and he just had to let out a fist pump. 
+            Letting out a quick fist pump, a big smile overtook his face. 
             That very excitement he felt was soon to become the beginning of what they realized was something more. 
           </p>
           <p className="mt-5">

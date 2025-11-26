@@ -30,7 +30,7 @@ const Navbar = () => {
             <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
           </DisclosureButton>
         </div>
-        <div className="flex flex-1 mx-auto items-center justify-center text-white sm:items-stretch sm:justify-start">
+        <div className="flex flex-1 mx-auto items-center justify-centersm:items-stretch sm:justify-start">
           <div className="hidden mx-auto  sm:block">
             <div className="flex space-x-[150px]">
               {navigation.map((item) => (
@@ -39,7 +39,7 @@ const Navbar = () => {
                   href={item.href}
                   target={item.name === "Registry" ? "_blank" : "_self"}
                   aria-current={item.current ? 'page' : undefined}
-                  className={'text-white'}
+                  className={'text-white text-shadow-sm text-shadow-black/50'}
                 >
                   {item.name}
                 </a>
@@ -52,16 +52,17 @@ const Navbar = () => {
     </div>
 
     <DisclosurePanel className="sm:hidden z-40">
-      <div className="space-y-1 px-2 pt-2 pb-3 bg-primary text-black text-shadow-sm text-shadow-black/40">
+      <div className="space-y-1 px-2 pt-2 pb-3 bg-primary-2 text-blue-950 font-extrabold">
         {navigation.map((item) => (
           <DisclosureButton
             key={item.name}
             as="a"
             href={item.href}
+            target={item.name === "Registry" ? "_blank" : "_self"}
             aria-current={item.current ? 'page' : undefined}
             className={classNames(
               item.current ? 'text-white' : 'text-white hover:text-white',
-              'block rounded-md px-3 py-2 text-base font-medium',
+              'block rounded-md px-3 py-2 text-lg',
             )}
           >
             {item.name}

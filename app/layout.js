@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 
 export const metadata = {
   title: "D+A",
-  description: "",
+  description: "Doli and Alan Wedding",
 };
 
 export default function RootLayout({ children }) {
