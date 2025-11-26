@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 
 
 export const metadata = {
-  title: "D+A",
+  title: "Doli and Alan Wedding",
   description: "Doli and Alan Wedding",
 };
 
