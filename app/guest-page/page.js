@@ -10,7 +10,7 @@ const page = () => {
       </div>
 
       <div className='flex items-center'>
-        <div className="flex m-auto">
+        <div className="sm:flex m-auto">
           <NewPartyForm />
           <NewMemberForm />
         </div>

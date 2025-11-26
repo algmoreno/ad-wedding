@@ -84,10 +84,10 @@ const GuestList = () => {
   }
 
   return (
-    <div className="block">
-      <div className="m-auto mt-8 flow-root overflow-scroll h-[400px] w-full bg-white border-2 font-business">
-        <div className="m-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <table className="w-full text-left">
+  <div className="block">
+    <div className="m-auto mt-8 overflow-x-auto overflow-y-auto h-[400px] w-full bg-white border-2 font-business">
+      <div className="m-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <table className="text-left">
             <thead className="bg-white">
               <tr>
                 <th
@@ -103,19 +103,19 @@ const GuestList = () => {
                 </th>
                 <th
                   scope="col"
-                  className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
+                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
                 >
                   Party ID
                 </th>
                 <th
                   scope="col"
-                  className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
+                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
                 >
                   Friday Dinner
                 </th>
                 <th
                   scope="col"
-                  className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 md:table-cell"
+                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 md:table-cell"
                 >
                   Ceremony & Lunch
                 </th>
@@ -139,11 +139,11 @@ const GuestList = () => {
                     <div className="absolute right-full bottom-0 h-px w-screen bg-gray-100" />
                     <div className="absolute bottom-0 left-0 h-px w-screen bg-gray-100" />
                   </td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingFriday)}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingCeremony)}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingReception)}</td>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 md:table-cell">{member.dietaryRestrictions}</td>
+                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
+                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingFriday)}</td>
+                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingCeremony)}</td>
+                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingReception)}</td>
+                  <td className="px-3 py-4 text-sm text-gray-500 md:table-cell">{member.dietaryRestrictions}</td>
                 </tr>
               ))}
             </tbody>
