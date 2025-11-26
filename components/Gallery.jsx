@@ -9,10 +9,10 @@ const images = [
     { id: 4, img: "/assets/ad-4.jpg" },
     { id: 5, img: "/assets/ad-5.jpg" },
     { id: 6, img: "/assets/ad-6.jpg" },
-    { id: 7, img: "/assets/ad-7.jpg" },
+    // { id: 7, img: "/assets/ad-7.heic" },
     { id: 8, img: "/assets/ad-8.jpg" },
     { id: 9, img: "/assets/ad-9.jpg" },
-    { id: 10, img: "/assets/ad-10.jpg" },
+    // { id: 10, img: "/assets/ad-10.jpg" },
   ];
 
 

@@ -293,7 +293,7 @@ color: inherit;
 .card {
     margin: auto;
     border-radius: 20px;
-    border: 5px solid #4f1c00;
+    /* border: 5px solid #4f1c00; */
     overflow: hidden;
 }
 
@@ -504,7 +504,7 @@ color: inherit;
 @media (max-width: 640px) {
   .card {
     margin: auto;
-    border-radius: 0px;
+    border-radius: 20px;
     border: none;
     overflow: hidden;
 }
