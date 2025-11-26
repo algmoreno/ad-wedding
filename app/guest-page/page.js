@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <Header />
-      <div className="col-span-2 mb-10">
+      <div className="mb-10">
         <GuestList />
       </div>
 

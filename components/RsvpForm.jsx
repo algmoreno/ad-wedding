@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { CustomLoader, HeartLoader } from '@/components/index';
+import { MdError } from "react-icons/md";
 
 const RsvpForm = ({ params }) => {
   const { id } = useParams();
@@ -98,7 +99,7 @@ const RsvpForm = ({ params }) => {
       </div>
     )
   }
-  if (members.length > 0){
+  if (!loading && members.length > 0){
     return (
       <div className="sm:px-6 lg:px-8 sm:py-10 mt-20">
         <div className="flex">
@@ -187,10 +188,20 @@ const RsvpForm = ({ params }) => {
         
       </div>
     )
+  } else if (loading){
+    return (
+      <div className="flex px-4 sm:px-6 lg:px-8 mt-10">
+        <CustomLoader />
+      </div>
+    )
   } else {
     return (
-      <div className="flex  px-4 sm:px-6 lg:px-8 mt-10">
-        <h1 className="m-auto text-2xl">Party not found. Enter a valid code or contact: admatel.wedding@gmail.com</h1>
+      <div className="flex sm:px-6 lg:px-8 mt-10">
+        <div className="mx-auto my-20 text-center items-center  sm:p-10 rounded-sm">
+          <MdError style={{ color: "brown" }}className="m-auto" size={50} />
+          <h1 className="text-2xl font-primary">Party not found</h1>
+          <h1 className="text-2xl font-primary">Enter a valid code or contact: admatel.wedding@gmail.com</h1>
+        </div>
       </div>
     )
   }

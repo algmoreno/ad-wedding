@@ -84,91 +84,81 @@ const GuestList = () => {
   }
 
   return (
-  <div className="block">
+    <div className="block">
     <div className="m-auto mt-8 overflow-x-auto overflow-y-auto h-[400px] w-full bg-white border-2 font-business">
-      <div className="m-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <table className="text-left">
-            <thead className="bg-white">
-              <tr>
-                <th
-                  scope="col"
-                  className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
-                >
-                  #
-                </th>
-                <th scope="col" className="relative isolate py-3.5 pr-3 text-left text-sm font-semibold text-gray-900">
-                  Name
-                  <div className="absolute inset-y-0 right-full -z-10 w-screen border-b border-b-gray-200" />
-                  <div className="absolute inset-y-0 left-0 -z-10 w-screen border-b border-b-gray-200" />
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
-                >
-                  Party ID
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
-                >
-                  Friday Dinner
-                </th>
-                <th
-                  scope="col"
-                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 md:table-cell"
-                >
-                  Ceremony & Lunch
-                </th>
-                <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                  Reception
-                </th>
-                <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                  Dietary Restrictions
-                </th>
-                <th scope="col" className="py-3.5 pl-3">
-                  <span className="sr-only">Edit</span>
-                </th>
+      <div className="m-auto px-4 sm:px-6 lg:px-8">
+        <table className="min-w-full text-center divide-y divide-gray-100">
+          <thead>
+            <tr className="divide-x divide-y divide-gray-300 p-2">
+              <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pl-0">
+                #
+              </th>
+              <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pl-0">
+                Name
+              </th>
+              <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
+                Party ID
+              </th>
+              <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
+                Friday Dinner
+              </th>
+              <th scope="col" className="px-4 py-3.5 text-center text-sm font-semibold text-gray-900">
+                Ceremony & Lunch
+              </th>
+              <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pr-0">
+                Reception
+              </th>
+              <th scope="col" className="py-3.5 pr-4 pl-4 text-center text-sm font-semibold text-gray-900 sm:pr-0">
+                Dietary Restrictions
+              </th>
+            </tr>
+          </thead>
+          {/* use divide-y and per-row border (no absolute w-screen lines) */}
+          <tbody className="bg-white">
+            {members.map((member, index) => (
+              <tr key={member._id} className="last:border-b-0 divide-y divide-gray-300">
+                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{index + 1}</td>
+  
+                <td className="py-4 pr-3 text-sm font-medium text-gray-900">
+                  {capitalizeFirstLetter(member.firstName)}
+                </td>
+  
+                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
+  
+                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">
+                  {boolToYesNo(member.attendingFriday)}
+                </td>
+  
+                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">
+                  {boolToYesNo(member.attendingCeremony)}
+                </td>
+  
+                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">
+                  {boolToYesNo(member.attendingReception)}
+                </td>
+  
+                <td className="px-3 py-4 text-sm text-gray-500 md:table-cell">
+                  {member.dietaryRestrictions}
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {members.map((member, index) => (
-                <tr key={member._id}>
-                  <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{index+1}</td>
-                  <td className="relative py-4 pr-3 text-sm font-medium text-gray-900">
-                    {capitalizeFirstLetter(member.firstName)} 
-                    <div className="absolute right-full bottom-0 h-px w-screen bg-gray-100" />
-                    <div className="absolute bottom-0 left-0 h-px w-screen bg-gray-100" />
-                  </td>
-                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
-                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingFriday)}</td>
-                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingCeremony)}</td>
-                  <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{boolToYesNo(member.attendingReception)}</td>
-                  <td className="px-3 py-4 text-sm text-gray-500 md:table-cell">{member.dietaryRestrictions}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+    <div className="flex m-auto p-2 border-1 gap-6 items-center w-full font-business bg-black">
+      <div className="m-auto">
+        <div className="block sm:gap-20 text-blue-500">
+          <h1 className="text-xl">Total: {members.length}</h1>
+          <h1>Friday: {attendanceCount("friday")}</h1>
+          <h1>Ceremony & Lunch: {attendanceCount("ceremony")}</h1>
+          <h1>Reception: {attendanceCount("reception")}</h1>
         </div>
       </div>
-      <div className="flex m-auto p-2 border-1 gap-6 items-center w-full font-business bg-black ">
-          <div className="m-auto">
-            <div className="block sm:gap-20 text-blue-500">
-            <h1 className="text-xl">
-              Total: {members.length}
-            </h1>
-              <h1>
-                Friday: {attendanceCount("friday")}
-              </h1>
-              <h1>
-                Ceremony & Lunch: {attendanceCount("ceremony")}
-              </h1>
-              <h1>
-                Reception: {attendanceCount("reception")}
-              </h1>
-            </div>
-          </div>
-        </div>
     </div>
+  </div>
+  
   )
  }
 
