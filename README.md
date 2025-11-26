@@ -41,7 +41,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - medium-large screens navbar crunch
 - mobile reposition header image?
+- rsvp show loading instead of 'party not found' unless party is not found
 
 - add gifts to registry
 
+- guest page mobile
 - guest page filtering (by yes/no, view everyone )

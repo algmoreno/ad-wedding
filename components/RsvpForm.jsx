@@ -77,20 +77,16 @@ const RsvpForm = ({ params }) => {
   };
 
   // Make first letter uppercase 
-  function capitalizeFirstLetter(name) {
+  function capitalizeWords(name) {
     if (typeof name !== 'string' || name.length === 0) {
-      return name; // Handle non-string or empty inputs
+      return name;
     }
-    return name.charAt(0).toUpperCase() + name.slice(1);
+  
+    return name
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
   }
-
-  if (loading) return (
-    <div className="flex px-4 sm:px-6 lg:px-8 mt-10">
-      <div className="m-auto">
-        <CustomLoader/>
-      </div>
-    </div>
-  )
 
   if (changesSaved) {
     return (
@@ -111,7 +107,7 @@ const RsvpForm = ({ params }) => {
         <div className="sm:flex sm:items-center p-4">
           <div className="flex sm:flex-auto">
             {members.length > 1 ? (
-            <p className="m-auto mt-2 text-sm text-red-900/50 text-shadow-sm text-shadow-black/30">
+            <p className="m-auto mt-2 text-md text-red-900/70 text-shadow-sm text-shadow-red/30">
               Please select all events each person will be attending
             </p>
             ) : (
@@ -151,7 +147,7 @@ const RsvpForm = ({ params }) => {
                   {members.map((member, index) => (
                     <tr key={member._id} className="divide-x divide-gray-200 text-center">
                       <td className="py-4 pr-4 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0">
-                      {capitalizeFirstLetter(member.firstName)} 
+                      {capitalizeWords(member.firstName)} 
                       </td>
                       {party?.fridayInvite && (                    
                       <td>

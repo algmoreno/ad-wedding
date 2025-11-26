@@ -52,7 +52,7 @@ const Navbar = () => {
     </div>
 
     <DisclosurePanel className="sm:hidden z-40">
-      <div className="space-y-1 px-2 pt-2 pb-3 bg-primary-2 text-blue-950 font-extrabold">
+      <div className="space-y-1 px-2 pt-2 pb-3 bg-primary-2 text-black font-extrabold outline-4 outline-offset-2 outline-gray-200">
         {navigation.map((item) => (
           <DisclosureButton
             key={item.name}
