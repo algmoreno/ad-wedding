@@ -466,8 +466,8 @@ color: inherit;
 
 @media (max-width: 640px) {
   .balatro-custom {
-    background-size: cover;
-    background-position: center top; /* no cutoff on phones */
+    background-size: 200%;
+    background-position: 0% 30%;
   }
 }
 

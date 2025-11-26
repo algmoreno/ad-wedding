@@ -5,8 +5,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 const navigation = [
-  { name: 'Event Details', href: '#details', current: false },
-  { name: 'Travel & Accommodations', href: '#t&a', current: false },
+  { name: 'Event Details', href: '/#details', current: false },
+  { name: 'Travel & Accommodations', href: '/#t&a', current: false },
     { name: 'Gallery', href: '/gallery', current: false },
     { name: 'RSVP', href: '/rsvp', current: false },
     { name: 'Registry', href: 'https://registry.theknot.com/alan-moreno-doli-patel-april-2026-az/75265407', current: false },
