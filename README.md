@@ -39,13 +39,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - Remove "Create Next App" google entry title
 
-- edit gallery story (fist pump)
-
-- full mobile responsive
 - medium-large screens navbar crunch
-- mobile reposition header image
-- large screen resposition header image / check on laptop
-
-- guest page filtering (by yes/no, view everyone )
+- mobile reposition header image?
 
 - add gifts to registry
+
+- guest page filtering (by yes/no, view everyone )
