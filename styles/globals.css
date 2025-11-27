@@ -274,6 +274,8 @@ background-size: contain;
   background-image:
   linear-gradient(rgba(252, 252, 252, 0.4), rgba(255, 255, 255, 0.3)),
   url("/assets/tree_pattern.png");
+  backdrop-filter: invert(95px);
+  background-attachment: fixed;
   background-size: 1200px;
   background-position: -50% 20%;
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
