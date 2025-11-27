@@ -74,7 +74,7 @@ const EventDetailsCard = () => {
 
         <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 my-10 justify-center">
           <h2 className="text-3xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black ">
-            Travel & Accommodation
+            Travel & Accommodations
           </h2>
         </div>
 
@@ -104,7 +104,7 @@ const EventDetailsCard = () => {
           <h1 className="text-xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
             Tucson, AZ 85704
           </h1>
-          <h1 className="font-primary text-xl font-extrabold sm:text-2xl mt-5 text-blue-600  text-shadow-lg text-shadow-blue-600/30">
+          <h1 className="font-primary text-xl font-extrabold sm:text-2xl mt-5 text-blue-800  text-shadow-sm text-shadow-blue-600/30">
           <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">Book your stay</a>
           </h1>
 
@@ -120,13 +120,13 @@ const EventDetailsCard = () => {
       </div> */}
 
       {/*RSVP and Contact Section */}
-      <div className="relative bg-engagement-footer rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20 border-y-2 border-amber-950">
+      <div className="relative bg-engagement-footer rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20">
 
         {/* RSVP Box */}
         <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto rounded-md">
           <div className="pb-2 justify-center items-center p-10 text-center rounded-sm">
             <a className="block backdrop-blur-[2px] rounded-sm" href="/rsvp"> 
-              <h1 className="text-4xl font-extrabold sm:text-6xl text-shadow-lg text-shadow-black/60 text-orange-300/90">
+              <h1 className="text-4xl font-extrabold sm:text-6xl text-shadow-lg text-shadow-black/50 text-orange-300/90">
                 RSVP
               </h1>
               <LiaExternalLinkAltSolid style={{ color: 'lightblue' }} className="m-auto" size={50}/>

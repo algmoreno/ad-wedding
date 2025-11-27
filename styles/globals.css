@@ -429,8 +429,8 @@ background-attachment: fixed;
 
 @media (max-width: 640px) {
   .balatro-custom {
-    background-size: 200%;
-    background-position: 0% 30%;
+    background-size: 400%;
+    background-position: center;
   }
 }
 
