@@ -109,7 +109,7 @@ export default function Balatro({
   spinSpeed = 1.0,
   offset = [0.0, 0.0],
   color1 = "#ffffff", // outer #011433
-  color2 = "#a6c2de", // center #d11c00 #034f91 #a6c2de
+  color2 = "#ffffff", // center #d11c00 #034f91 #a6c2de
   color3 = "#eeeeee", 
   contrast = 3.5,
   lighting = 0.4,
@@ -124,8 +124,13 @@ export default function Balatro({
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
-    const renderer = new Renderer();
+    const renderer = new Renderer({
+      antialias: true,
+      preserveDrawingBuffer: true,
+      alpha: true,
+    });
     const gl = renderer.gl;
+    gl.pixelRatio = Math.min(window.devicePixelRatio, 1.5);
     gl.clearColor(0, 0, 0, 0);
 
     let program;
@@ -140,8 +145,7 @@ export default function Balatro({
         ];
       }
     }
-    window.addEventListener("resize", resize);
-    resize();
+    
 
     const geometry = new Triangle(gl);
     program = new Program(gl, {
@@ -182,6 +186,8 @@ export default function Balatro({
     }
     animationFrameId = requestAnimationFrame(update);
     container.appendChild(gl.canvas);
+    resize();
+    window.addEventListener("resize", resize);
 
     function handleMouseMove(e) {
       if (!mouseInteraction) return;
