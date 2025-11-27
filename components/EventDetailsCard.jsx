@@ -92,23 +92,26 @@ const EventDetailsCard = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center items-center p-10 text-center backdrop-blur-[2px]">
-        <div className="bg-hotel h-[500px] w-full rounded-sm"></div>
-          
+        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center sm:p-10 items-center text-center backdrop-blur-[2px]">
+          <div className="bg-hotel h-[500px] w-full rounded-sm">
+          </div>
+          <div className="px-10 sm:p-0">
           <h2 className="text-2xl font-extrabold sm:text-4xl mt-5 text-gray-900 text-shadow-sm text-shadow-black/30">
-            Hilton El Conquistador Resort
-          </h2>
-          <h2 className="text-xl font-extrabold sm:text-2xl mt-5 text-shadow-lg text-shadow-white-200/30">
-            10000 N Oracle Rd
-          </h2>
-          <h1 className="text-xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
-            Tucson, AZ 85704
-          </h1>
-          <h1 className="font-primary text-xl font-extrabold sm:text-2xl mt-5 text-blue-800  text-shadow-sm text-shadow-blue-600/30">
-          <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">Book your stay</a>
-          </h1>
+              Hilton El Conquistador Resort
+            </h2>
+            <h2 className="text-xl font-extrabold sm:text-2xl mt-5 text-shadow-lg text-shadow-white-200/30">
+              10000 N Oracle Rd
+            </h2>
+            <h1 className="text-xl font-extrabold sm:text-2xl text-gray-900 text-shadow-lg text-shadow-white-200/30">
+              Tucson, AZ 85704
+            </h1>
+            <h1 className="font-primary text-xl font-extrabold sm:text-2xl mt-5 text-blue-800  text-shadow-sm text-shadow-blue-600/30">
+            <a target="_blank" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=TUSHTHH&arrivalDate=2026-04-17&departureDate=2026-04-19&groupCode=PMW417&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink">Book your stay</a>
+            </h1>
+          </div>
 
-        </div>
+
+          </div>
 
       </div>
 
