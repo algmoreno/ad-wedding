@@ -13,11 +13,12 @@ const EventDetailsCard = () => {
       </div>
 
       {/*Event Details */}
-      <div id="details" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-2 gap-10 w-full h-full mt-20 z-20 p-5">
+      <div id="details" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-2 gap-10 w-full h-full pt-20 z-20 p-5">
 
         {/* Top row: date spans both columns */}
-        <div className="flex col-start-4 col-end-7 my-10 justify-end items-center">
-          <div className="flex w-full h-full backdrop-blur-[2px] items-center align-middle justify-center">
+        <div className="flex col-start-4 col-end-7 mb-10 justify-end items-center 
+          sm:bg-transparent bg-[#f8f3f0] p-2 border-[0px] border-1 sm:border-none border-black  text-red-900 outline-1 sm:outline-none outline-offset-8">
+          <div className="flex w-full h-full items-center align-middle justify-center">
             <h2 className="m-auto text-3xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black">
               Saturday, April 18, 2026
             </h2>
@@ -26,7 +27,7 @@ const EventDetailsCard = () => {
         </div>
 
         {/* Row 1, Column 1: Event 1 */}
-        <div className="bg-5 flex flex-col col-start-1 col-end-4 row-start-1 justify-center items-center p-10 border-4 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
+        <div className="bg-5 flex flex-col col-start-1 col-end-4 row-start-1 justify-center items-center p-10 border-1 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[6px] shadow-2xl">
           <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             9:15 am
           </h2>
@@ -45,7 +46,7 @@ const EventDetailsCard = () => {
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="bg-5 flex flex-col col-start-4 col-end-7 row-start-2 justify-center items-center p-10 text-center border-4 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[4px] shadow-2xl">
+        <div className="bg-5 flex flex-col col-start-4 col-end-7 row-start-2 justify-center items-center p-10 text-center border-1 border-black text-red-900 outline-2 outline-offset-8 backdrop-blur-[4px] shadow-2xl">
           <h2 className="text-xl font-extrabold sm:text-2xl text-shadow-lg text-shadow-white-200/30">
             5:30 pm
           </h2>
@@ -70,16 +71,16 @@ const EventDetailsCard = () => {
       </div>
 
       {/*Travel & Accommodation Section */}
-      <div id="t&a" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 w-full h-full z-20 mb-20">
+      <div id="t&a" className="relative sm:grid sm:grid-cols-6 sm:grid-rows-3 w-full h-full z-20 mt-20 sm:mt-0 sm:backdrop-blur-none backdrop-blur-3xl">
 
         <div className="flex sm:col-span-4 sm:col-start-2 row-start-4 my-10 justify-center">
-          <h2 className="text-3xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black ">
+          <h2 className="text-3xl sm:text-4xl text-center font-extrabold text-black text-shadow-sm text-shadow-black">
             Travel & Accommodations
           </h2>
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 mb-20 sm:mb-0 text-center backdrop-blur-[2px]">
+        <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 mb-20 sm:mb-0 text-center ">
           <img className="w-[120px] sm:mt-10 height-auto" src="/assets/airplane_icon.png" />
           <h2 className="text-2xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-sm text-shadow-black/30">
             Tucson International Airport
@@ -92,7 +93,7 @@ const EventDetailsCard = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center sm:p-10 mb-20 sm:mb-0 items-center text-center backdrop-blur-[2px]">
+        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center sm:p-10 pb-20 sm:mb-0 items-center text-center">
           <div className="bg-hotel h-[500px] w-full rounded-sm">
           </div>
           <div className="px-10 sm:p-0">
@@ -123,7 +124,7 @@ const EventDetailsCard = () => {
       </div> */}
 
       {/*RSVP and Contact Section */}
-      <div className="relative bg-engagement-footer rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 my-20 w-full h-[500px] z-20">
+      <div className="relative bg-engagement-footer rounded-sm p-10 sm:grid sm:grid-cols-3 sm:grid-rows-3 mt-20 w-full h-[500px] z-20">
 
         {/* RSVP Box */}
         <div className="flex flex-col col-start-1 col-end-4 row-start-1 min-h-[250px] m-auto rounded-md">
@@ -141,7 +142,7 @@ const EventDetailsCard = () => {
         </div>
 
         {/* Contact text fixed to bottom center */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white w-full flex justify-center">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white w-full p-5 flex justify-center">
           <h2 className="font-primary text-black text-xl sm:text-2xl text-center font-extrabold text-shadow-lg text-shadow-white-200/30">
             For any questions contact: admatel.wedding@gmail.com
           </h2>

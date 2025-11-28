@@ -440,7 +440,7 @@ background-size: contain;
     linear-gradient(rgba(213, 213, 213, 0.4), rgba(255, 255, 255, 0.3)),
     url("/assets/tree_pattern.png");
     background-size: 200%;
-    background-attachment: fixed;
+    background-attachment: local;
   }
 }
 
