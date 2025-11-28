@@ -4,10 +4,10 @@ import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
 const EventDetailsCard = () => {
   return (
-    <div className="w-full sm:min-h-[1100px] overflow-hidden font-header drop-shadow-sm">
+    <div className="w-full balatro-custom-1 sm:min-h-[1100px] overflow-hidden font-header drop-shadow-sm">
 
       { /* Shared background */}
-      <div className="flex absolute inset-0 -z-10">
+      <div className="hidden sm:flex absolute inset-0 -z-10">
         <Balatro isRotate={false} mouseInteraction={false} pixelFilter={2000} />
         <div className="absolute inset-0 balatro-custom pointer-events-none" />
       </div>
@@ -79,7 +79,7 @@ const EventDetailsCard = () => {
         </div>
 
         {/* Row 2, Column 2: Event 2 */}
-        <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 text-center backdrop-blur-[2px]">
+        <div className="flex flex-col col-start-1 col-end-4 row-start-5 justify-center items-center p-10 mb-20 sm:mb-0 text-center backdrop-blur-[2px]">
           <img className="w-[120px] sm:mt-10 height-auto" src="/assets/airplane_icon.png" />
           <h2 className="text-2xl font-extrabold sm:text-4xl text-shadow-lg text-shadow-sm text-shadow-black/30">
             Tucson International Airport
@@ -92,7 +92,7 @@ const EventDetailsCard = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center sm:p-10 items-center text-center backdrop-blur-[2px]">
+        <div className="flex flex-col col-start-4 col-end-7 row-start-5 justify-center sm:p-10 mb-20 sm:mb-0 items-center text-center backdrop-blur-[2px]">
           <div className="bg-hotel h-[500px] w-full rounded-sm">
           </div>
           <div className="px-10 sm:p-0">
