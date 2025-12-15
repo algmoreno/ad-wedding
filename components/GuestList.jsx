@@ -6,17 +6,64 @@ import { useState, useEffect } from 'react';
 const GuestList = () => {
   const [members, setMembers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [firstLoad, setFirstLoad] = useState(false)
   const [fridayCount, setFridayCount] = useState(0)
   const [ceremonyCount, setCeremonyCount] = useState(0)
   const [receptionCount, setReceptionCount] = useState(0)
 
   // get all members
   useEffect(() => {
-    axios.get(`/api/auth/member/`)
-      .then(res =>{console.log(res);sortByPartyAndSet(res.data.Members); setLoading(false); attendanceCount()})
+    if (!firstLoad){
+      axios.get(`/api/auth/member/`)
+      .then(res =>{console.log(res);sortByPartyAndSet(res.data.Members); setLoading(false); attendanceCount(); setFirstLoad(true)})
       .catch(err => console.error(err));
-    
+    }
+
   }, []);
+
+  function sortByYesNo() {
+    const sorted = [...members].sort((a, b) => {
+      if (a.attendingReception === b.attendingReception) return 0;
+      return a.attendingReception ? -1 : 1; // true first
+    });
+  
+    setMembers(sorted);
+
+  }
+
+  function sortByPartyAndSet(members) {
+    // groups: Map<normalizedPartyId, Member[]>
+    const groups = new Map();
+
+    members.forEach(member => {
+      // safely read partyId and normalize it (trim, turn undefined -> special key)
+      const raw = member?.party?.partyId;
+      const key = raw === undefined || raw === null ? '__no_party__' : String(raw).trim();
+
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(member);
+    });
+
+    // Sort the keys: numeric keys by numeric value, then fallback to localeCompare.
+    const keys = Array.from(groups.keys()).sort((a, b) => {
+      if (a === '__no_party__') return 1; // put no-party at the end
+      if (b === '__no_party__') return -1;
+
+      const aNum = Number(a);
+      const bNum = Number(b);
+      const aIsNum = !Number.isNaN(aNum);
+      const bIsNum = !Number.isNaN(bNum);
+
+      if (aIsNum && bIsNum) return aNum - bNum;
+      // natural string comparison (handles "10" vs "2" better than plain lexicographical)
+      return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    // Flatten groups in order of keys, preserving order inside each group
+    const sorted = keys.flatMap(k => groups.get(k));
+
+    setMembers(sorted);
+  }
 
   // Make names uppercase 
   function capitalizeFirstLetter(name) {
@@ -29,41 +76,6 @@ const GuestList = () => {
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
   }
-
-  function sortByPartyAndSet(members) {
-    // groups: Map<normalizedPartyId, Member[]>
-    const groups = new Map();
-  
-    members.forEach(member => {
-      // safely read partyId and normalize it (trim, turn undefined -> special key)
-      const raw = member?.party?.partyId;
-      const key = raw === undefined || raw === null ? '__no_party__' : String(raw).trim();
-  
-      if (!groups.has(key)) groups.set(key, []);
-      groups.get(key).push(member);
-    });
-  
-    // Sort the keys: numeric keys by numeric value, then fallback to localeCompare.
-    const keys = Array.from(groups.keys()).sort((a, b) => {
-      if (a === '__no_party__') return 1; // put no-party at the end
-      if (b === '__no_party__') return -1;
-  
-      const aNum = Number(a);
-      const bNum = Number(b);
-      const aIsNum = !Number.isNaN(aNum);
-      const bIsNum = !Number.isNaN(bNum);
-  
-      if (aIsNum && bIsNum) return aNum - bNum;
-      // natural string comparison (handles "10" vs "2" better than plain lexicographical)
-      return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-    });
-  
-    // Flatten groups in order of keys, preserving order inside each group
-    const sorted = keys.flatMap(k => groups.get(k));
-  
-    setMembers(sorted);
-  }
-  
 
   function attendanceCount(event) {
     return members.reduce((count, member) => {
@@ -125,15 +137,15 @@ const GuestList = () => {
   
                 <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">{member.party.partyId}</td>
   
-                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">
+                <td className={`"px-3 py-4 text-sm sm:table-cell" ${member.attendingFriday ? 'text-green-500' : 'text-black'}`}>
                   {boolToYesNo(member.attendingFriday)}
                 </td>
   
-                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">
+                <td className={`"px-3 py-4 text-sm sm:table-cell" ${member.attendingCeremony ? 'text-green-500' : 'text-black'}`}>
                   {boolToYesNo(member.attendingCeremony)}
                 </td>
-  
-                <td className="px-3 py-4 text-sm text-gray-500 sm:table-cell">
+
+                <td className={`"px-3 py-4 text-sm sm:table-cell" ${member.attendingReception ? 'text-green-500' : 'text-black'}`} >
                   {boolToYesNo(member.attendingReception)}
                 </td>
   
@@ -154,6 +166,7 @@ const GuestList = () => {
           <h1>Friday: {attendanceCount("friday")}</h1>
           <h1>Ceremony & Lunch: {attendanceCount("ceremony")}</h1>
           <h1>Reception: {attendanceCount("reception")}</h1>
+          <button onClick={sortByYesNo} className="bg-white rounded-sm p-2">Sort By Yes</button>
         </div>
       </div>
     </div>
