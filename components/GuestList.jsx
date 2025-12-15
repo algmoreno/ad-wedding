@@ -164,8 +164,8 @@ const GuestList = () => {
         <div className="block sm:gap-20 text-blue-500">
           <h1 className="text-xl">Total: {members.length}</h1>
           <h1>Friday: {attendanceCount("friday")}</h1>
-          <h1>Ceremony & Lunch: {attendanceCount("ceremony")}</h1>
-          <h1>Reception: {attendanceCount("reception")}</h1>
+          <h1>Ceremony & Lunch: {attendanceCount("ceremony")} ({((attendanceCount("ceremony") / members.length) * 100).toFixed(1)}%)</h1>
+          <h1>Reception: {attendanceCount("reception")} ({((attendanceCount("reception") / members.length) * 100).toFixed(1)}%)</h1>
           <button onClick={sortByYesNo} className="bg-white rounded-sm p-2">Sort By Yes</button>
         </div>
       </div>
