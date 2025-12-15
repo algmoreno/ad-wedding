@@ -38,6 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## TODO
 
 - medium-large screens navbar crunch
-- balatro background on mobile - remove balatro on mobile only background img
 
 - add gifts to registry
