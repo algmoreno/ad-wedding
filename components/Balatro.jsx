@@ -124,8 +124,13 @@ export default function Balatro({
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
-    const renderer = new Renderer();
+    const renderer = new Renderer({
+      antialias: true,
+      preserveDrawingBuffer: true,
+      alpha: true,
+    });
     const gl = renderer.gl;
+    gl.pixelRatio = Math.min(window.devicePixelRatio, 1.5);
     gl.clearColor(0, 0, 0, 0);
 
     let program;
@@ -140,8 +145,7 @@ export default function Balatro({
         ];
       }
     }
-    window.addEventListener("resize", resize);
-    resize();
+    
 
     const geometry = new Triangle(gl);
     program = new Program(gl, {
@@ -182,6 +186,8 @@ export default function Balatro({
     }
     animationFrameId = requestAnimationFrame(update);
     container.appendChild(gl.canvas);
+    resize();
+    window.addEventListener("resize", resize);
 
     function handleMouseMove(e) {
       if (!mouseInteraction) return;
